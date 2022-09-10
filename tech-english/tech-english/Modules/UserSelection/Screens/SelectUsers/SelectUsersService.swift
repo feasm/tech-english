@@ -21,7 +21,7 @@ final class SelectUsersServiceMock: SelectUsersService {
     func getUsers(_ completion: @escaping GetUsersCompletion) {
         let users = [
             UserModel(name: "Felipe", description: "felipe@gmail.com", isActivated: false),
-            UserModel(name: "De Luca", description: "deluca@gmail.com", isActivated: true),
+            UserModel(name: "De Luca", description: "deluca@gmail.com", isActivated: false),
             UserModel(name: "William", description: "william@gmail.com", isActivated: false),
             UserModel(name: "Gusta", description: "gusta@gmail.com", isActivated: false)
         ]
