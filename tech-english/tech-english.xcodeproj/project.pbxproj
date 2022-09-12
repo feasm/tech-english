@@ -29,6 +29,9 @@
 		AF7BEBB728C94144008230C1 /* UserListViewControllerImpl.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7BEBB528C94144008230C1 /* UserListViewControllerImpl.xib */; };
 		AF7BEBB928C94675008230C1 /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BEBB828C94675008230C1 /* UserListPresenter.swift */; };
 		AF7BEBBB28C94829008230C1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BEBBA28C94829008230C1 /* UserModel.swift */; };
+		B148762828CE487000543CF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148762628CE487000543CF4 /* LoginViewController.swift */; };
+		B148762928CE487000543CF4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B148762728CE487000543CF4 /* LoginViewController.xib */; };
+		B148762E28CEAA2300543CF4 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148762D28CEAA2300543CF4 /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,10 @@
 		AF7BEBB528C94144008230C1 /* UserListViewControllerImpl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListViewControllerImpl.xib; sourceTree = "<group>"; };
 		AF7BEBB828C94675008230C1 /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
 		AF7BEBBA28C94829008230C1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B148762528CE46F200543CF4 /* TNCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TNCore; path = packages/TNCore; sourceTree = "<group>"; };
+		B148762628CE487000543CF4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B148762728CE487000543CF4 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B148762D28CEAA2300543CF4 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +171,7 @@
 			children = (
 				AF5EFEB028C912BC0011B923 /* TNCore */,
 				AF5EFEB128C912CF0011B923 /* TNUI */,
+				B148762528CE46F200543CF4 /* TNCore */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 		AF719A0D28C9150A00139BE5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B148762A28CE488D00543CF4 /* Login */,
 				AF719A1128C915AA00139BE5 /* UserSelection */,
 			);
 			path = Modules;
@@ -229,6 +238,32 @@
 				AF7BEBB828C94675008230C1 /* UserListPresenter.swift */,
 			);
 			path = UserList;
+			sourceTree = "<group>";
+		};
+		B148762A28CE488D00543CF4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B148762D28CEAA2300543CF4 /* LoginCoordinator.swift */,
+				B148762B28CEA95B00543CF4 /* Screens */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B148762B28CEA95B00543CF4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B148762C28CEA97C00543CF4 /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B148762C28CEA97C00543CF4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B148762628CE487000543CF4 /* LoginViewController.swift */,
+				B148762728CE487000543CF4 /* LoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +380,7 @@
 			files = (
 				AF5EFE8C28C911CC0011B923 /* LaunchScreen.storyboard in Resources */,
 				AF5EFE8928C911CC0011B923 /* Assets.xcassets in Resources */,
+				B148762928CE487000543CF4 /* LoginViewController.xib in Resources */,
 				AF5EFE8728C911C90011B923 /* Main.storyboard in Resources */,
 				AF719A1528C915C400139BE5 /* SelectUsersViewControllerImpl.xib in Resources */,
 				AF7BEBB728C94144008230C1 /* UserListViewControllerImpl.xib in Resources */,
@@ -372,9 +408,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B148762828CE487000543CF4 /* LoginViewController.swift in Sources */,
 				AF719A1028C9152A00139BE5 /* AppCoordinator.swift in Sources */,
 				AF719A1728C916C500139BE5 /* UserSelectionFeatureCoordinator.swift in Sources */,
 				AF5EFE8428C911C90011B923 /* ViewController.swift in Sources */,
+				B148762E28CEAA2300543CF4 /* LoginCoordinator.swift in Sources */,
 				AF7BEBB928C94675008230C1 /* UserListPresenter.swift in Sources */,
 				AF5EFE8028C911C90011B923 /* AppDelegate.swift in Sources */,
 				AF7BEBAE28C9314E008230C1 /* SelectUsersPresenter.swift in Sources */,
