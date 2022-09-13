@@ -8,11 +8,21 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="tech_english" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="Ewm-ru-vgd" id="OHw-jT-eFk"/>
+                <outlet property="emailTextField" destination="chC-ye-hoa" id="5BX-4K-sLB"/>
                 <outlet property="mainStackView" destination="8HC-Kl-2RM" id="3vR-kT-t7Z"/>
+                <outlet property="passwordTextField" destination="JN1-dE-1Jv" id="klV-Iz-ihN"/>
                 <outlet property="signInButton" destination="Zpu-SD-eNT" id="0eA-RB-u1E"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -39,13 +49,13 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shu-4U-1rW">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="58"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem vindo de volta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaX-8A-1cZ">
                                             <rect key="frame" x="0.0" y="58" width="366" height="36"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                             <color key="textColor" red="0.56470588235294117" green="0.58431372549019611" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -59,7 +69,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrj-AN-XRU">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="22"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -69,7 +79,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="HTe-y1-nPV"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
@@ -82,7 +92,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNt-iQ-xPb">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="22"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -92,8 +102,8 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="gQ8-HW-e9C"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         </textField>
                                     </subviews>
                                     <constraints>
@@ -106,7 +116,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="22" id="9yo-tj-l40"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                     <color key="textColor" systemColor="linkColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -119,7 +129,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="tBr-6a-hKx"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Sign In">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,9 +144,9 @@
                                     <rect key="frame" x="0.0" y="412" width="366" height="100"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR CONTINUE WITH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDq-gz-Lge">
-                                            <rect key="frame" x="124" y="0.0" width="118" height="92"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="124.5" y="0.0" width="117" height="92"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="e16-yA-juC" userLabel="Account Buttons Stack View">
@@ -174,23 +184,23 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bag-9k-kye" userLabel="Signup Stack View">
-                            <rect key="frame" x="102" y="675" width="210" height="20"/>
+                            <rect key="frame" x="94" y="675" width="226" height="20"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXH-ke-u1Q">
-                                    <rect key="frame" x="0.0" y="0.0" width="152" height="20"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="166" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="I2b-4y-rJQ"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7D-3R-W6d" userLabel="Sign up">
-                                    <rect key="frame" x="158" y="0.0" width="52" height="20"/>
+                                    <rect key="frame" x="172" y="0.0" width="54" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="kSp-H6-bnB"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
                                     <color key="textColor" systemColor="linkColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
