@@ -10,7 +10,7 @@ import TNCore
 import TNUI
 
 class LoginViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,19 +35,21 @@ class LoginViewController: UIViewController {
         passwordTextField.layer.cornerRadius = 6
         emailTextField.borderStyle = .none
         passwordTextField.borderStyle = .none
-        emailTextField.layer.masksToBounds = true
-        emailTextField.layer.borderColor = UIColor.clear.cgColor
         contentView.layer.cornerRadius = 15
         
         emailTextField.setupImage(imageName: emailImage, on: .left, x: 18, y: 10, width: 20, height: 20)
         passwordTextField.setupImage(imageName: passwordImage, on: .left, x: 18, y: 10, width: 20, height: 20)
         passwordTextField.setupImage(imageName: revealPasswordImage, on: .right, x: 0, y: 10, width: 20, height: 20)
        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTogglePasswordButtonTapped(sender:)))
-        passwordTextField.rightView?.addGestureRecognizer(tapGesture)
+        addTapRecognizer(target: passwordTextField.rightView, handler: #selector(handleTogglePasswordButtonTapped(sender:)))
         
-        let signUpTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleSignUpButtonTapped(sender:)))
-        signUpLabel.addGestureRecognizer(signUpTapGesture)
+        addTapRecognizer(target: signUpLabel, handler: #selector(handleSignUpButtonTapped(sender:)))
+    }
+    
+    func addTapRecognizer (target: UIView?, handler: Selector) {
+        guard let target = target else {return}
+        let tapGesture = UITapGestureRecognizer(target: self, action: handler)
+        target.addGestureRecognizer(tapGesture)
     }
     
     func signUpButtonTapped () {
@@ -62,56 +64,35 @@ class LoginViewController: UIViewController {
         if passwordTextField.isSecureTextEntry == true {
             passwordTextField.isSecureTextEntry = false
             passwordTextField.setupImage(imageName: hidePasswordImage, on: .right, x: 0, y: 10, width: 20, height: 20)
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTogglePasswordButtonTapped(sender:)))
-            passwordTextField.rightView?.addGestureRecognizer(tapGesture)
+            addTapRecognizer(target: passwordTextField.rightView, handler: #selector(handleTogglePasswordButtonTapped(sender:)))
         } else {
             passwordTextField.isSecureTextEntry = true
             passwordTextField.setupImage(imageName: revealPasswordImage, on: .right, x: 0, y: 10, width: 20, height: 20)
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTogglePasswordButtonTapped(sender:)))
-            passwordTextField.rightView?.addGestureRecognizer(tapGesture)
+            addTapRecognizer(target: passwordTextField.rightView, handler: #selector(handleTogglePasswordButtonTapped(sender:)))
         }
     }
 }
 
-//criar class no TNUI
-protocol LoginViewControllerDelegate: AnyObject {
+//quando eu tiro a classe daqui e coloca no arquivo do TNUI nao funciona, o texto placeholder dos textfields fica fora de alinhamento de novo
+protocol LoginTextFieldDelegate: AnyObject {
     
 }
 
-class LoginTextField: UITextField {
+public class LoginTextField: UITextField {
     var textPadding = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
     var textField: UITextField?
     let revealPasswordImage = "password-icon"
     let hidePasswordImage = "passwordoff-icon"
     
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
+    public override func textRect(forBounds bounds: CGRect) -> CGRect {
         let rect = super.textRect(forBounds: bounds)
         return rect.inset(by: textPadding)
     }
     
-    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+    public override func editingRect(forBounds bounds: CGRect) -> CGRect {
         let rect = super.editingRect(forBounds: bounds)
         return rect.inset(by: textPadding)
     }
-    
-//    func addTapRecognizer (textField: UITextField) {
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTogglePasswordButtonTapped(sender:)))
-//        textField.rightView?.addGestureRecognizer(tapGesture)
-//    }
-//
-//    @objc func handleTogglePasswordButtonTapped(sender: UIGestureRecognizer) {
-//        if textField?.isSecureTextEntry == true {
-//            textField?.isSecureTextEntry = false
-//            textField?.setupImage(imageName: hidePasswordImage, on: .right, x: 0, y: 10, width: 20, height: 20)
-//            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTogglePasswordButtonTapped(sender:)))
-//            textField?.rightView?.addGestureRecognizer(tapGesture)
-//        } else {
-//            textField?.isSecureTextEntry = true
-//            textField?.setupImage(imageName: revealPasswordImage, on: .right, x: 0, y: 10, width: 20, height: 20)
-//            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTogglePasswordButtonTapped(sender:)))
-//            textField?.rightView?.addGestureRecognizer(tapGesture)
-//        }
-//    }
 }
 
 
