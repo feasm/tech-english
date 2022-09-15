@@ -86,9 +86,6 @@
 		B148767628CFF36700543CF4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B148764228CFF36700543CF4 /* Poppins-Bold.ttf */; };
 		B148767728CFF36700543CF4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B148764228CFF36700543CF4 /* Poppins-Bold.ttf */; };
 		B148767828CFF36700543CF4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B148764228CFF36700543CF4 /* Poppins-Bold.ttf */; };
-		B148767C28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148767B28D00B5900543CF4 /*  UITextField+extensions.swift */; };
-		B148767D28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148767B28D00B5900543CF4 /*  UITextField+extensions.swift */; };
-		B148767E28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148767B28D00B5900543CF4 /*  UITextField+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,7 +153,6 @@
 		B148764028CFF36700543CF4 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		B148764128CFF36700543CF4 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		B148764228CFF36700543CF4 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		B148767B28D00B5900543CF4 /*  UITextField+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UITextField+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +208,6 @@
 		AF5EFE7E28C911C90011B923 /* tech-english */ = {
 			isa = PBXGroup;
 			children = (
-				B148767928D00AF300543CF4 /* Utils */,
 				B148762F28CFF32900543CF4 /* Assets */,
 				AF719A0E28C9151200139BE5 /* Coordinator */,
 				AF719A0D28C9150A00139BE5 /* Modules */,
@@ -375,22 +370,6 @@
 				B148763F28CFF36700543CF4 /* Poppins-ThinItalic.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		B148767928D00AF300543CF4 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				B148767A28D00B0A00543CF4 /* Extensions */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		B148767A28D00B0A00543CF4 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B148767B28D00B5900543CF4 /*  UITextField+extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -591,7 +570,6 @@
 			files = (
 				B148762828CE487000543CF4 /* LoginViewController.swift in Sources */,
 				AF719A1028C9152A00139BE5 /* AppCoordinator.swift in Sources */,
-				B148767C28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */,
 				AF719A1728C916C500139BE5 /* UserSelectionFeatureCoordinator.swift in Sources */,
 				AF5EFE8428C911C90011B923 /* ViewController.swift in Sources */,
 				B148762E28CEAA2300543CF4 /* LoginCoordinator.swift in Sources */,
@@ -610,7 +588,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B148767D28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */,
 				AF5EFE9728C911CC0011B923 /* tech_englishTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,7 +596,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B148767E28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */,
 				AF5EFEA128C911CC0011B923 /* tech_englishUITests.swift in Sources */,
 				AF5EFEA328C911CC0011B923 /* tech_englishUITestsLaunchTests.swift in Sources */,
 			);

@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-extension UITextField {
+let button = UIButton(type: .custom)
+
+public extension UITextField {
     enum TextFieldImageSide {
         case left
         case right
