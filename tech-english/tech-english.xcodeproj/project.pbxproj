@@ -89,6 +89,10 @@
 		B148767C28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148767B28D00B5900543CF4 /*  UITextField+extensions.swift */; };
 		B148767D28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148767B28D00B5900543CF4 /*  UITextField+extensions.swift */; };
 		B148767E28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148767B28D00B5900543CF4 /*  UITextField+extensions.swift */; };
+		F96F8B1D28D65EA900A4C787 /* RegisterNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96F8B1B28D65EA900A4C787 /* RegisterNumberViewController.swift */; };
+		F96F8B1E28D65EA900A4C787 /* RegisterNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96F8B1C28D65EA900A4C787 /* RegisterNumberViewController.xib */; };
+		F9BC89D028D13F2B00EBAE41 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BC89CE28D13F2B00EBAE41 /* RegisterNameViewController.swift */; };
+		F9BC89D128D13F2B00EBAE41 /* RegisterNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BC89CF28D13F2B00EBAE41 /* RegisterNameViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +161,10 @@
 		B148764128CFF36700543CF4 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		B148764228CFF36700543CF4 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		B148767B28D00B5900543CF4 /*  UITextField+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UITextField+extensions.swift"; sourceTree = "<group>"; };
+		F96F8B1B28D65EA900A4C787 /* RegisterNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNumberViewController.swift; sourceTree = "<group>"; };
+		F96F8B1C28D65EA900A4C787 /* RegisterNumberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterNumberViewController.xib; sourceTree = "<group>"; };
+		F9BC89CE28D13F2B00EBAE41 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
+		F9BC89CF28D13F2B00EBAE41 /* RegisterNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterNameViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +338,8 @@
 		B148762B28CEA95B00543CF4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F96F8B1A28D65E5700A4C787 /* RegisterNumber */,
+				F9BC89CD28D13EDA00EBAE41 /* RegisterName */,
 				B148762C28CEA97C00543CF4 /* Login */,
 			);
 			path = Screens;
@@ -391,6 +401,24 @@
 				B148767B28D00B5900543CF4 /*  UITextField+extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F96F8B1A28D65E5700A4C787 /* RegisterNumber */ = {
+			isa = PBXGroup;
+			children = (
+				F96F8B1B28D65EA900A4C787 /* RegisterNumberViewController.swift */,
+				F96F8B1C28D65EA900A4C787 /* RegisterNumberViewController.xib */,
+			);
+			path = RegisterNumber;
+			sourceTree = "<group>";
+		};
+		F9BC89CD28D13EDA00EBAE41 /* RegisterName */ = {
+			isa = PBXGroup;
+			children = (
+				F9BC89CE28D13F2B00EBAE41 /* RegisterNameViewController.swift */,
+				F9BC89CF28D13F2B00EBAE41 /* RegisterNameViewController.xib */,
+			);
+			path = RegisterName;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,6 +539,7 @@
 				AF5EFE8C28C911CC0011B923 /* LaunchScreen.storyboard in Resources */,
 				B148767328CFF36700543CF4 /* Poppins-BoldItalic.ttf in Resources */,
 				B148764928CFF36700543CF4 /* Poppins-ExtraBold.ttf in Resources */,
+				F96F8B1E28D65EA900A4C787 /* RegisterNumberViewController.xib in Resources */,
 				B148765528CFF36700543CF4 /* Poppins-Thin.ttf in Resources */,
 				B148767028CFF36700543CF4 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				B148766428CFF36700543CF4 /* Poppins-Black.ttf in Resources */,
@@ -522,6 +551,7 @@
 				B148766D28CFF36700543CF4 /* Poppins-ThinItalic.ttf in Resources */,
 				B148765E28CFF36700543CF4 /* Poppins-Light.ttf in Resources */,
 				AF5EFE8728C911C90011B923 /* Main.storyboard in Resources */,
+				F9BC89D128D13F2B00EBAE41 /* RegisterNameViewController.xib in Resources */,
 				AF719A1528C915C400139BE5 /* SelectUsersViewControllerImpl.xib in Resources */,
 				AF7BEBB728C94144008230C1 /* UserListViewControllerImpl.xib in Resources */,
 				B148767628CFF36700543CF4 /* Poppins-Bold.ttf in Resources */,
@@ -591,12 +621,14 @@
 			files = (
 				B148762828CE487000543CF4 /* LoginViewController.swift in Sources */,
 				AF719A1028C9152A00139BE5 /* AppCoordinator.swift in Sources */,
+				F96F8B1D28D65EA900A4C787 /* RegisterNumberViewController.swift in Sources */,
 				B148767C28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */,
 				AF719A1728C916C500139BE5 /* UserSelectionFeatureCoordinator.swift in Sources */,
 				AF5EFE8428C911C90011B923 /* ViewController.swift in Sources */,
 				B148762E28CEAA2300543CF4 /* LoginCoordinator.swift in Sources */,
 				AF7BEBB928C94675008230C1 /* UserListPresenter.swift in Sources */,
 				AF5EFE8028C911C90011B923 /* AppDelegate.swift in Sources */,
+				F9BC89D028D13F2B00EBAE41 /* RegisterNameViewController.swift in Sources */,
 				AF7BEBAE28C9314E008230C1 /* SelectUsersPresenter.swift in Sources */,
 				AF7BEBB628C94144008230C1 /* UserListViewController.swift in Sources */,
 				AF5EFE8228C911C90011B923 /* SceneDelegate.swift in Sources */,
