@@ -80,7 +80,7 @@
                                             <color key="textColor" red="0.25728526709999999" green="0.28172785039999998" blue="0.33587729929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chC-ye-hoa" customClass="LoginTextField" customModule="tech_english" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chC-ye-hoa" customClass="LoginTextField" customModule="TNUI">
                                             <rect key="frame" x="0.0" y="29" width="366" height="44"/>
                                             <color key="backgroundColor" red="0.95340377089999995" green="0.95717376470000004" blue="0.9639270902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -103,7 +103,7 @@
                                             <color key="textColor" red="0.25728526709999999" green="0.28172785039999998" blue="0.33587729929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JN1-dE-1Jv" customClass="LoginTextField" customModule="tech_english" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JN1-dE-1Jv" customClass="LoginTextField" customModule="TNUI">
                                             <rect key="frame" x="0.0" y="29" width="366" height="44"/>
                                             <color key="backgroundColor" red="0.95340377089999995" green="0.95717376470000004" blue="0.9639270902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>

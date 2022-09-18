@@ -24,12 +24,3 @@ final class LoginCoordinator: Coordinator {
     }
     
 }
-
-//extension UserSelectionFeatureCoordinator: SelectUsersCoordinator {
-//    func showUserList(userModels: [UserModel]) {
-//        let presenter = UserListPresenterImpl(userModels: userModels)
-//        let viewController = UserListViewControllerImpl(presenter: presenter)
-//
-//        navigationViewController?.pushViewController(viewController, animated: true)
-//    }
-//}
