@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-extension UITextField {
+public extension UITextField {
     enum TextFieldImageSide {
         case left
         case right
     }
 
-    func setupImage(imageName: String, on side: TextFieldImageSide, x: Int, y: Int, width: Int, height: Int) {
+    func setupImage(imageName: String, on side: TextFieldImageSide, x: Int = 0, y: Int = 0, width: Int = 0, height: Int = 0) {
         let imageView = UIImageView(frame: CGRect(x: x, y: y, width: width, height: height))
         if let imageWithSystemName = UIImage(systemName: imageName) {
             imageView.image = imageWithSystemName

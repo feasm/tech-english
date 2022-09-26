@@ -16,8 +16,6 @@
 		AF5EFE9728C911CC0011B923 /* tech_englishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFE9628C911CC0011B923 /* tech_englishTests.swift */; };
 		AF5EFEA128C911CC0011B923 /* tech_englishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFEA028C911CC0011B923 /* tech_englishUITests.swift */; };
 		AF5EFEA328C911CC0011B923 /* tech_englishUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFEA228C911CC0011B923 /* tech_englishUITestsLaunchTests.swift */; };
-		AF5EFEB428C913190011B923 /* TNCore in Frameworks */ = {isa = PBXBuildFile; productRef = AF5EFEB328C913190011B923 /* TNCore */; };
-		AF5EFEB628C913190011B923 /* TNUI in Frameworks */ = {isa = PBXBuildFile; productRef = AF5EFEB528C913190011B923 /* TNUI */; };
 		AF5EFEB928C913A70011B923 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AF5EFEB828C913A70011B923 /* SnapKit */; };
 		AF719A1028C9152A00139BE5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A0F28C9152A00139BE5 /* AppCoordinator.swift */; };
 		AF719A1428C915C400139BE5 /* SelectUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A1228C915C400139BE5 /* SelectUsersViewController.swift */; };
@@ -29,6 +27,11 @@
 		AF7BEBB728C94144008230C1 /* UserListViewControllerImpl.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7BEBB528C94144008230C1 /* UserListViewControllerImpl.xib */; };
 		AF7BEBB928C94675008230C1 /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BEBB828C94675008230C1 /* UserListPresenter.swift */; };
 		AF7BEBBB28C94829008230C1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BEBBA28C94829008230C1 /* UserModel.swift */; };
+		B122517928D7B4BB0059411F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B122517828D7B4BB0059411F /* LoginModel.swift */; };
+		B122517B28D7B4D50059411F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B122517A28D7B4D50059411F /* LoginPresenter.swift */; };
+		B122517D28D7B5060059411F /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B122517C28D7B5060059411F /* LoginService.swift */; };
+		B122518128D91CFD0059411F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B122518028D91CFD0059411F /* Realm */; };
+		B122518328D91CFD0059411F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B122518228D91CFD0059411F /* RealmSwift */; };
 		B148762828CE487000543CF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148762628CE487000543CF4 /* LoginViewController.swift */; };
 		B148762928CE487000543CF4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B148762728CE487000543CF4 /* LoginViewController.xib */; };
 		B148762E28CEAA2300543CF4 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148762D28CEAA2300543CF4 /* LoginCoordinator.swift */; };
@@ -93,6 +96,10 @@
 		F96F8B1E28D65EA900A4C787 /* RegisterNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96F8B1C28D65EA900A4C787 /* RegisterNumberViewController.xib */; };
 		F9BC89D028D13F2B00EBAE41 /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BC89CE28D13F2B00EBAE41 /* RegisterNameViewController.swift */; };
 		F9BC89D128D13F2B00EBAE41 /* RegisterNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BC89CF28D13F2B00EBAE41 /* RegisterNameViewController.xib */; };
+		B15DC8E928D4027C00A59150 /* TNCore in Frameworks */ = {isa = PBXBuildFile; productRef = B15DC8E828D4027C00A59150 /* TNCore */; };
+		B15DC8EB28D4028100A59150 /* TNUI in Frameworks */ = {isa = PBXBuildFile; productRef = B15DC8EA28D4028100A59150 /* TNUI */; };
+		B1721F2F28DD14AA008F3FB2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1721F2D28DD14AA008F3FB2 /* TestViewController.swift */; };
+		B1721F3028DD14AA008F3FB2 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1721F2E28DD14AA008F3FB2 /* TestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,7 +145,9 @@
 		AF7BEBB528C94144008230C1 /* UserListViewControllerImpl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListViewControllerImpl.xib; sourceTree = "<group>"; };
 		AF7BEBB828C94675008230C1 /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
 		AF7BEBBA28C94829008230C1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		B148762528CE46F200543CF4 /* TNCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TNCore; path = packages/TNCore; sourceTree = "<group>"; };
+		B122517828D7B4BB0059411F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		B122517A28D7B4D50059411F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		B122517C28D7B5060059411F /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		B148762628CE487000543CF4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B148762728CE487000543CF4 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		B148762D28CEAA2300543CF4 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
@@ -165,6 +174,8 @@
 		F96F8B1C28D65EA900A4C787 /* RegisterNumberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterNumberViewController.xib; sourceTree = "<group>"; };
 		F9BC89CE28D13F2B00EBAE41 /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
 		F9BC89CF28D13F2B00EBAE41 /* RegisterNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterNameViewController.xib; sourceTree = "<group>"; };
+		B1721F2D28DD14AA008F3FB2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		B1721F2E28DD14AA008F3FB2 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,9 +183,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15DC8EB28D4028100A59150 /* TNUI in Frameworks */,
 				AF5EFEB928C913A70011B923 /* SnapKit in Frameworks */,
-				AF5EFEB628C913190011B923 /* TNUI in Frameworks */,
-				AF5EFEB428C913190011B923 /* TNCore in Frameworks */,
+				B122518128D91CFD0059411F /* Realm in Frameworks */,
+				B122518328D91CFD0059411F /* RealmSwift in Frameworks */,
+				B15DC8E928D4027C00A59150 /* TNCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +233,6 @@
 		AF5EFE7E28C911C90011B923 /* tech-english */ = {
 			isa = PBXGroup;
 			children = (
-				B148767928D00AF300543CF4 /* Utils */,
 				B148762F28CFF32900543CF4 /* Assets */,
 				AF719A0E28C9151200139BE5 /* Coordinator */,
 				AF719A0D28C9150A00139BE5 /* Modules */,
@@ -257,7 +269,6 @@
 			children = (
 				AF5EFEB028C912BC0011B923 /* TNCore */,
 				AF5EFEB128C912CF0011B923 /* TNUI */,
-				B148762528CE46F200543CF4 /* TNCore */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -326,6 +337,30 @@
 			path = UserList;
 			sourceTree = "<group>";
 		};
+		B122517328D7B43A0059411F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B122517C28D7B5060059411F /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B122517528D7B4530059411F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B122517A28D7B4D50059411F /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B122517728D7B4920059411F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B122517828D7B4BB0059411F /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B148762A28CE488D00543CF4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,17 +376,23 @@
 				F96F8B1A28D65E5700A4C787 /* RegisterNumber */,
 				F9BC89CD28D13EDA00EBAE41 /* RegisterName */,
 				B148762C28CEA97C00543CF4 /* Login */,
+				B122517728D7B4920059411F /* Model */,
+				B148762C28CEA97C00543CF4 /* View */,
+				B122517528D7B4530059411F /* Presenter */,
+				B122517328D7B43A0059411F /* Service */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		B148762C28CEA97C00543CF4 /* Login */ = {
+		B148762C28CEA97C00543CF4 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				B148762628CE487000543CF4 /* LoginViewController.swift */,
 				B148762728CE487000543CF4 /* LoginViewController.xib */,
+				B1721F2D28DD14AA008F3FB2 /* TestViewController.swift */,
+				B1721F2E28DD14AA008F3FB2 /* TestViewController.xib */,
 			);
-			path = Login;
+			path = View;
 			sourceTree = "<group>";
 		};
 		B148762F28CFF32900543CF4 /* Assets */ = {
@@ -428,8 +469,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF5EFEA628C911CC0011B923 /* Build configuration list for PBXNativeTarget "tech-english" */;
 			buildPhases = (
-				AF5EFE7828C911C90011B923 /* Sources */,
 				AF5EFE7928C911C90011B923 /* Frameworks */,
+				AF5EFE7828C911C90011B923 /* Sources */,
 				AF5EFE7A28C911C90011B923 /* Resources */,
 			);
 			buildRules = (
@@ -438,9 +479,11 @@
 			);
 			name = "tech-english";
 			packageProductDependencies = (
-				AF5EFEB328C913190011B923 /* TNCore */,
-				AF5EFEB528C913190011B923 /* TNUI */,
 				AF5EFEB828C913A70011B923 /* SnapKit */,
+				B15DC8E828D4027C00A59150 /* TNCore */,
+				B15DC8EA28D4028100A59150 /* TNUI */,
+				B122518028D91CFD0059411F /* Realm */,
+				B122518228D91CFD0059411F /* RealmSwift */,
 			);
 			productName = "tech-english";
 			productReference = AF5EFE7C28C911C90011B923 /* tech-english.app */;
@@ -516,6 +559,7 @@
 			mainGroup = AF5EFE7328C911C90011B923;
 			packageReferences = (
 				AF5EFEB728C913A70011B923 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B122517F28D91CFC0059411F /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = AF5EFE7D28C911C90011B923 /* Products */;
 			projectDirPath = "";
@@ -540,6 +584,7 @@
 				B148767328CFF36700543CF4 /* Poppins-BoldItalic.ttf in Resources */,
 				B148764928CFF36700543CF4 /* Poppins-ExtraBold.ttf in Resources */,
 				F96F8B1E28D65EA900A4C787 /* RegisterNumberViewController.xib in Resources */,
+				B1721F3028DD14AA008F3FB2 /* TestViewController.xib in Resources */,
 				B148765528CFF36700543CF4 /* Poppins-Thin.ttf in Resources */,
 				B148767028CFF36700543CF4 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				B148766428CFF36700543CF4 /* Poppins-Black.ttf in Resources */,
@@ -620,6 +665,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B148762828CE487000543CF4 /* LoginViewController.swift in Sources */,
+				B122517928D7B4BB0059411F /* LoginModel.swift in Sources */,
+				B1721F2F28DD14AA008F3FB2 /* TestViewController.swift in Sources */,
 				AF719A1028C9152A00139BE5 /* AppCoordinator.swift in Sources */,
 				F96F8B1D28D65EA900A4C787 /* RegisterNumberViewController.swift in Sources */,
 				B148767C28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */,
@@ -627,9 +674,11 @@
 				AF5EFE8428C911C90011B923 /* ViewController.swift in Sources */,
 				B148762E28CEAA2300543CF4 /* LoginCoordinator.swift in Sources */,
 				AF7BEBB928C94675008230C1 /* UserListPresenter.swift in Sources */,
+				B122517D28D7B5060059411F /* LoginService.swift in Sources */,
 				AF5EFE8028C911C90011B923 /* AppDelegate.swift in Sources */,
 				F9BC89D028D13F2B00EBAE41 /* RegisterNameViewController.swift in Sources */,
 				AF7BEBAE28C9314E008230C1 /* SelectUsersPresenter.swift in Sources */,
+				B122517B28D7B4D50059411F /* LoginPresenter.swift in Sources */,
 				AF7BEBB628C94144008230C1 /* UserListViewController.swift in Sources */,
 				AF5EFE8228C911C90011B923 /* SceneDelegate.swift in Sources */,
 				AF7BEBB028C93165008230C1 /* SelectUsersService.swift in Sources */,
@@ -642,7 +691,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B148767D28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */,
 				AF5EFE9728C911CC0011B923 /* tech_englishTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,7 +699,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B148767E28D00B5900543CF4 /*  UITextField+extensions.swift in Sources */,
 				AF5EFEA128C911CC0011B923 /* tech_englishUITests.swift in Sources */,
 				AF5EFEA328C911CC0011B923 /* tech_englishUITestsLaunchTests.swift in Sources */,
 			);
@@ -986,21 +1033,39 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		B122517F28D91CFC0059411F /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AF5EFEB328C913190011B923 /* TNCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TNCore;
-		};
-		AF5EFEB528C913190011B923 /* TNUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TNUI;
-		};
 		AF5EFEB828C913A70011B923 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AF5EFEB728C913A70011B923 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		B122518028D91CFD0059411F /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B122517F28D91CFC0059411F /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		B122518228D91CFD0059411F /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B122517F28D91CFC0059411F /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		B15DC8E828D4027C00A59150 /* TNCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TNCore;
+		};
+		B15DC8EA28D4028100A59150 /* TNUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TNUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

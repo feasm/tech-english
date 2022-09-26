@@ -18,23 +18,27 @@ final class LoginCoordinator: Coordinator {
     }
     
     func start() {
-//       let viewController = LoginViewController()
-//        
-//       navigationViewController?.pushViewController(viewController, animated: true)
-         showRegisterName()
+        let service = LoginService()
+        let presenter = LoginPresenter(service: service)
+        let viewController = LoginViewController(presenter: presenter)
+        
+        presenter.coordinator = self
+        presenter.isUserAuthenticated()
+        navigationViewController?.pushViewController(viewController, animated: true)
     }
+    
     func showRegisterName() {
         let viewController = RegisterNameViewController()
-        
         navigationViewController?.pushViewController(viewController, animated: true)
     }
 }
 
-//extension UserSelectionFeatureCoordinator: SelectUsersCoordinator {
-//    func showUserList(userModels: [UserModel]) {
-//        let presenter = UserListPresenterImpl(userModels: userModels)
-//        let viewController = UserListViewControllerImpl(presenter: presenter)
-//
-//        navigationViewController?.pushViewController(viewController, animated: true)
-//    }
-//}
+extension LoginCoordinator: LoginPresenterCoordinator {
+    func openTestScreen() {
+        let viewController = TestViewController()
+        
+        DispatchQueue.main.async {
+            self.navigationViewController?.pushViewController(viewController, animated: true)
+        }
+    }
+}
