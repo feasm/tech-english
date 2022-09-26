@@ -12,4 +12,5 @@ public struct Constants {
     public static let passwordImage = "lock-icon"
     public static let revealPasswordImage = "passwordon-icon"
     public static let hidePasswordImage = "passwordoff-icon"
+    public static let appID = "tech-english-dvhvd"
 }
