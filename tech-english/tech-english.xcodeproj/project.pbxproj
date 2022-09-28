@@ -32,6 +32,7 @@
 		B122517D28D7B5060059411F /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B122517C28D7B5060059411F /* LoginService.swift */; };
 		B122518128D91CFD0059411F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B122518028D91CFD0059411F /* Realm */; };
 		B122518328D91CFD0059411F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B122518228D91CFD0059411F /* RealmSwift */; };
+		B142FDD828E3ABA5002456B9 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = B142FDD728E3ABA5002456B9 /* FacebookLogin */; };
 		B148762828CE487000543CF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148762628CE487000543CF4 /* LoginViewController.swift */; };
 		B148762928CE487000543CF4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B148762728CE487000543CF4 /* LoginViewController.xib */; };
 		B148762E28CEAA2300543CF4 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148762D28CEAA2300543CF4 /* LoginCoordinator.swift */; };
@@ -141,6 +142,7 @@
 		B122517828D7B4BB0059411F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		B122517A28D7B4D50059411F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		B122517C28D7B5060059411F /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		B142FDD928E3AF9F002456B9 /* tech-english.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "tech-english.entitlements"; sourceTree = "<group>"; };
 		B148762628CE487000543CF4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B148762728CE487000543CF4 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		B148762D28CEAA2300543CF4 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			files = (
 				B15DC8EB28D4028100A59150 /* TNUI in Frameworks */,
 				AF5EFEB928C913A70011B923 /* SnapKit in Frameworks */,
+				B142FDD828E3ABA5002456B9 /* FacebookLogin in Frameworks */,
 				B122518128D91CFD0059411F /* Realm in Frameworks */,
 				B122518328D91CFD0059411F /* RealmSwift in Frameworks */,
 				B15DC8E928D4027C00A59150 /* TNCore in Frameworks */,
@@ -221,6 +224,7 @@
 		AF5EFE7E28C911C90011B923 /* tech-english */ = {
 			isa = PBXGroup;
 			children = (
+				B142FDD928E3AF9F002456B9 /* tech-english.entitlements */,
 				B148762F28CFF32900543CF4 /* Assets */,
 				AF719A0E28C9151200139BE5 /* Coordinator */,
 				AF719A0D28C9150A00139BE5 /* Modules */,
@@ -435,6 +439,7 @@
 				B15DC8EA28D4028100A59150 /* TNUI */,
 				B122518028D91CFD0059411F /* Realm */,
 				B122518228D91CFD0059411F /* RealmSwift */,
+				B142FDD728E3ABA5002456B9 /* FacebookLogin */,
 			);
 			productName = "tech-english";
 			productReference = AF5EFE7C28C911C90011B923 /* tech-english.app */;
@@ -511,6 +516,7 @@
 			packageReferences = (
 				AF5EFEB728C913A70011B923 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B122517F28D91CFC0059411F /* XCRemoteSwiftPackageReference "realm-swift" */,
+				B142FDD628E3ABA5002456B9 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = AF5EFE7D28C911C90011B923 /* Products */;
 			projectDirPath = "";
@@ -804,6 +810,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "tech-english/tech-english.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XWMMXB4KD;
@@ -831,6 +838,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "tech-english/tech-english.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XWMMXB4KD;
@@ -987,6 +995,14 @@
 				kind = branch;
 			};
 		};
+		B142FDD628E3ABA5002456B9 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1004,6 +1020,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B122517F28D91CFC0059411F /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		B142FDD728E3ABA5002456B9 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B142FDD628E3ABA5002456B9 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
 		};
 		B15DC8E828D4027C00A59150 /* TNCore */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -183,15 +183,33 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="e16-yA-juC" userLabel="Account Buttons Stack View">
                                             <rect key="frame" x="103" y="22" width="160" height="78"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Google 2" translatesAutoresizingMaskIntoConstraints="NO" id="lzD-UU-0MF">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgv-ft-nRo" userLabel="GoogleButton">
                                                     <rect key="frame" x="0.0" y="0.0" width="32" height="78"/>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook 3" translatesAutoresizingMaskIntoConstraints="NO" id="EdT-eY-TzF">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="uvi-S1-SHZ"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="Google 2"/>
+                                                    <connections>
+                                                        <action selector="googleSignInButtonTapped:" destination="-1" eventType="touchUpInside" id="TkQ-SD-vK0"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Leh-Sr-Ud5" userLabel="FacebookButton">
                                                     <rect key="frame" x="64" y="0.0" width="32" height="78"/>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple 2" translatesAutoresizingMaskIntoConstraints="NO" id="NAT-te-scS">
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="Facebook 3"/>
+                                                    <connections>
+                                                        <action selector="facebookSignInButtonTapped:" destination="-1" eventType="touchUpInside" id="MVF-Hc-scK"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sp3-IN-HYB" userLabel="AppleButton">
                                                     <rect key="frame" x="128" y="0.0" width="32" height="78"/>
-                                                </imageView>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="Apple 2"/>
+                                                    <connections>
+                                                        <action selector="appleSignInButtonTapped:" destination="-1" eventType="touchUpInside" id="Ws0-ig-QsB"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </stackView>
                                     </subviews>
