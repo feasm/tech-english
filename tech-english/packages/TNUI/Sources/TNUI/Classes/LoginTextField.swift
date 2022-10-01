@@ -50,13 +50,13 @@ public class LoginTextField: UITextField {
         guard let target = target else {return}
         let tapGesture = UITapGestureRecognizer(target: self, action: handler)
         target.addGestureRecognizer(tapGesture)
-        togglePasswordButtonTapped()
     }
     
     @objc func handleTogglePasswordButtonTapped(sender: UIGestureRecognizer) {
         guard let textField = textField else {return}
         textField.setupImage(imageName: self.passwordImage, on: .right, x: 0, y: 10, width: 20, height: 20)
             addTapRecognizer(target: textField.rightView, handler: #selector(handleTogglePasswordButtonTapped(sender:)))
+        togglePasswordButtonTapped()
     }
     
 }

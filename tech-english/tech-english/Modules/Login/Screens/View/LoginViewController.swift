@@ -17,15 +17,43 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: LoginTextField!
     @IBOutlet weak var passwordTextField: LoginTextField!
     @IBOutlet weak var signUpLabel: UILabel!
+    @IBOutlet weak var rememberMeButton: UIButton!
     
+    var presenter: LoginPresenterProtocol?
+    //posso instanciar o logintextfield desta maneira ou precisa ser feito dependency injection
     let loginTextField = LoginTextField()
+    
+    init(presenter: LoginPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loginTextField.loginTextFieldDelegate = self
+        
         setupUI()
+        loginTextField.loginTextFieldDelegate = self
         loginTextField.setupTextField(view: [emailTextField, passwordTextField])
+    }
+    
+    @IBAction func rememberMeButtonPressed(_ sender: Any) {
+        if rememberMeButton.currentImage == UIImage(systemName: "square") {
+            rememberMeButton.setImage(UIImage(systemName: "square.fill"), for: .normal)
+            presenter?.rememberMeEnabled = true
+        } else {
+            rememberMeButton.setImage(UIImage(systemName: "square"), for: .normal)
+            presenter?.rememberMeEnabled = false
+        }
+    }
+
+    @IBAction func singInButtonTapped(_ sender: Any) {
+        presenter?.email = emailTextField.text ?? ""
+        presenter?.password = passwordTextField.text ?? ""
+        presenter?.didTapLoginButton()
     }
     
     private func setupUI() {

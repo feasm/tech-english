@@ -23,6 +23,7 @@
                 <outlet property="emailTextField" destination="chC-ye-hoa" id="5BX-4K-sLB"/>
                 <outlet property="mainStackView" destination="8HC-Kl-2RM" id="3vR-kT-t7Z"/>
                 <outlet property="passwordTextField" destination="JN1-dE-1Jv" id="klV-Iz-ihN"/>
+                <outlet property="rememberMeButton" destination="8B8-Xh-HqV" id="KA1-ah-Jtf"/>
                 <outlet property="signInButton" destination="Zpu-SD-eNT" id="0eA-RB-u1E"/>
                 <outlet property="signUpLabel" destination="U7D-3R-W6d" id="CWJ-R7-t6a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -112,15 +113,33 @@
                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         </textField>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot password?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xf-KP-C7B">
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IR5-wa-rTI">
                                             <rect key="frame" x="0.0" y="76" width="366" height="32"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="32" id="9yo-tj-l40"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                            <color key="textColor" systemColor="linkColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8B8-Xh-HqV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="241" height="32"/>
+                                                    <color key="tintColor" red="0.090196078430000007" green="0.1019607843" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" imagePlacement="leading" title="Remember Me" imagePadding="3">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="medium"/>
+                                                        <fontDescription key="titleFontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                        <color key="baseForegroundColor" red="0.25728526709999999" green="0.28172785039999998" blue="0.33587729929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="rememberMeButtonPressed:" destination="-1" eventType="touchUpInside" id="i2R-T2-etS"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot password?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xf-KP-C7B">
+                                                    <rect key="frame" x="241" y="0.0" width="125" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="9yo-tj-l40"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                    <color key="textColor" systemColor="linkColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="JNt-iQ-xPb" firstAttribute="top" secondItem="fpE-bG-VB6" secondAttribute="top" id="UfR-pi-blO"/>
@@ -140,6 +159,9 @@
                                             <state key="normal" title="Sign In">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="singInButtonTapped:" destination="-1" eventType="touchUpInside" id="S96-iW-S3P"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -245,6 +267,7 @@
         <image name="Facebook 3" width="32" height="32"/>
         <image name="Google 2" width="32" height="32"/>
         <image name="background-image" width="375" height="192"/>
+        <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="PrimaryBlue">
             <color red="0.11800000071525574" green="0.3919999897480011" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
