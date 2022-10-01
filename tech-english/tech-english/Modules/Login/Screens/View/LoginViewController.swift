@@ -8,6 +8,7 @@
 import UIKit
 import TNCore
 import TNUI
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
 
@@ -54,6 +55,16 @@ class LoginViewController: UIViewController {
         presenter?.email = emailTextField.text ?? ""
         presenter?.password = passwordTextField.text ?? ""
         presenter?.didTapLoginButton()
+    }
+    
+    @IBAction func facebookSignInButtonTapped(_ sender: Any) {
+        presenter?.didTapFacebookLoginButton(view: self)
+    }
+    
+    @IBAction func googleSignInButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func appleSignInButtonTapped(_ sender: Any) {
     }
     
     private func setupUI() {

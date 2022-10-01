@@ -1,12 +1,21 @@
 {
   "pins" : [
     {
+      "identity" : "facebook-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/facebook/facebook-ios-sdk",
+      "state" : {
+        "revision" : "c3d367656ae8ced1149c2c6a5e6b5dd91ecad63c",
+        "version" : "9.3.0"
+      }
+    },
+    {
       "identity" : "realm-core",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core",
       "state" : {
-        "revision" : "5da7744b4056ad185c025bccf0924f17f73f7a91",
-        "version" : "12.6.0"
+        "revision" : "18abbb4e9dc268620fa499923a92921bf26db8c6",
+        "version" : "12.7.0"
       }
     },
     {
@@ -15,7 +24,7 @@
       "location" : "https://github.com/realm/realm-swift.git",
       "state" : {
         "branch" : "master",
-        "revision" : "a4e41b471f5ee702c63f2b81b87dc6302fe20e49"
+        "revision" : "554b605990ac1232427fe27ad61f302f5c74ac4c"
       }
     },
     {
