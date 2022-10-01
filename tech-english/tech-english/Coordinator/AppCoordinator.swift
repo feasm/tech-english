@@ -31,7 +31,8 @@ final class AppCoordinator: Coordinator {
         window?.rootViewController = navigationViewController
         window?.makeKeyAndVisible()
         
-        let coordinator = UserSelectionFeatureCoordinator(navigationController: navigationViewController)
+//        let coordinator = UserSelectionFeatureCoordinator(navigationController: navigationViewController)
+        let coordinator = LoginCoordinator(navigationController: navigationViewController)
         coordinator.start()
     }
     
