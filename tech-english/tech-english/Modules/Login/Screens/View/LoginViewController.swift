@@ -62,6 +62,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func googleSignInButtonTapped(_ sender: Any) {
+        presenter?.didTapGoogleLoginButton(view: self)
     }
     
     @IBAction func appleSignInButtonTapped(_ sender: Any) {

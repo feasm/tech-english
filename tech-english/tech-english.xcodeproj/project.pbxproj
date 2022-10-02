@@ -33,6 +33,7 @@
 		B122518128D91CFD0059411F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B122518028D91CFD0059411F /* Realm */; };
 		B122518328D91CFD0059411F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B122518228D91CFD0059411F /* RealmSwift */; };
 		B142FDD828E3ABA5002456B9 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = B142FDD728E3ABA5002456B9 /* FacebookLogin */; };
+		B142FDDF28E52506002456B9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B142FDDE28E52506002456B9 /* GoogleSignIn */; };
 		B148762828CE487000543CF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148762628CE487000543CF4 /* LoginViewController.swift */; };
 		B148762928CE487000543CF4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B148762728CE487000543CF4 /* LoginViewController.xib */; };
 		B148762E28CEAA2300543CF4 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148762D28CEAA2300543CF4 /* LoginCoordinator.swift */; };
@@ -179,6 +180,7 @@
 				B122518128D91CFD0059411F /* Realm in Frameworks */,
 				B122518328D91CFD0059411F /* RealmSwift in Frameworks */,
 				B15DC8E928D4027C00A59150 /* TNCore in Frameworks */,
+				B142FDDF28E52506002456B9 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +442,7 @@
 				B122518028D91CFD0059411F /* Realm */,
 				B122518228D91CFD0059411F /* RealmSwift */,
 				B142FDD728E3ABA5002456B9 /* FacebookLogin */,
+				B142FDDE28E52506002456B9 /* GoogleSignIn */,
 			);
 			productName = "tech-english";
 			productReference = AF5EFE7C28C911C90011B923 /* tech-english.app */;
@@ -517,6 +520,7 @@
 				AF5EFEB728C913A70011B923 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B122517F28D91CFC0059411F /* XCRemoteSwiftPackageReference "realm-swift" */,
 				B142FDD628E3ABA5002456B9 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				B142FDDD28E52506002456B9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = AF5EFE7D28C911C90011B923 /* Products */;
 			projectDirPath = "";
@@ -813,7 +817,7 @@
 				CODE_SIGN_ENTITLEMENTS = "tech-english/tech-english.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4XWMMXB4KD;
+				DEVELOPMENT_TEAM = NZ7Q8F9UNM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tech-english/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -841,7 +845,7 @@
 				CODE_SIGN_ENTITLEMENTS = "tech-english/tech-english.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4XWMMXB4KD;
+				DEVELOPMENT_TEAM = NZ7Q8F9UNM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tech-english/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1003,6 +1007,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		B142FDDD28E52506002456B9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1025,6 +1037,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B142FDD628E3ABA5002456B9 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookLogin;
+		};
+		B142FDDE28E52506002456B9 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B142FDDD28E52506002456B9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
 		};
 		B15DC8E828D4027C00A59150 /* TNCore */ = {
 			isa = XCSwiftPackageProductDependency;

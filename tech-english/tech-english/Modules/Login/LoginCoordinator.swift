@@ -23,6 +23,7 @@ final class LoginCoordinator: Coordinator {
         let viewController = LoginViewController(presenter: presenter)
         
         presenter.coordinator = self
+        service.delegate = presenter
         presenter.isUserAuthenticated()
         navigationViewController?.pushViewController(viewController, animated: true)
     }
