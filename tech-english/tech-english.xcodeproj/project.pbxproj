@@ -134,7 +134,6 @@
 		B148764028CFF36700543CF4 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		B148764128CFF36700543CF4 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		B148764228CFF36700543CF4 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		B17CB1A728EA3E8D001DA651 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		B1A1C99FF01CD14D28834766 /* Pods-tech-english.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tech-english.release.xcconfig"; path = "Target Support Files/Pods-tech-english/Pods-tech-english.release.xcconfig"; sourceTree = "<group>"; };
 		B8A9E1E1750F6ED5C0392367 /* Pods_tech_english_tech_englishUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tech_english_tech_englishUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -177,7 +176,6 @@
 				AF5EFE7D28C911C90011B923 /* Products */,
 				B97739BA092DE9B433EA7B6C /* Pods */,
 				FEF72EC6C8E397AE7E31ECAF /* Frameworks */,
-				AFAB912528F346B3006F0BF2 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,14 +236,6 @@
 				AF719A0F28C9152A00139BE5 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		AFAB912528F346B3006F0BF2 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				B17CB1A728EA3E8D001DA651 /* HomeKit.framework */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		B148762F28CFF32900543CF4 /* Assets */ = {

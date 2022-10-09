@@ -25,6 +25,7 @@ final class AppCoordinator: Coordinator {
     
     func start() {
         navigationViewController = UINavigationController()
+        navigationViewController?.setNavigationBarHidden(true, animated: false)
         
         window?.rootViewController = navigationViewController
         window?.makeKeyAndVisible()
