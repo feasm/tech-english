@@ -12,6 +12,7 @@ import FBSDKCoreKit
 import FacebookCore
 import FacebookLogin
 import GoogleSignIn
+import AuthenticationServices
 
 let app = App(id: Constants.appID)
 
@@ -21,6 +22,7 @@ protocol LoginServiceProtocol {
     func loginWith(email:String, password: String)
     func loginWithFacebook(view: UIViewController)
     func loginWithGoogle(view: UIViewController)
+    func loginWithApple(view: UIViewController)
     func logOut()
 }
 
@@ -120,6 +122,22 @@ class LoginService: LoginServiceProtocol {
         }
     }
     
+    func loginWithApple(view: UIViewController) {
+        
+        let credentials = Credentials.apple(idToken: "com.age.tech-english")
+        self.login(with: credentials) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .failure(let error):
+                    print("Login failed: \(error.localizedDescription)")
+                case .success(let user):
+                    print("Login successful with Apple as user \(user)")
+                    self.delegate?.didLoginSuccessfully()
+                }
+            }
+        }
+    }
+    
     func logOut() {
         app.currentUser?.logOut(completion: { error in
             if let error = error {
@@ -128,4 +146,8 @@ class LoginService: LoginServiceProtocol {
         })
     }
 }
+
+
+
+
 

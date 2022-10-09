@@ -9,6 +9,7 @@ import Foundation
 import FBSDKLoginKit
 import GoogleSignIn
 import TNCore
+import AuthenticationServices
 
 protocol LoginPresenterCoordinator {
     func openTestScreen()
@@ -19,6 +20,7 @@ protocol LoginPresenterProtocol {
     func didTapLoginButton()
     func didTapFacebookLoginButton(view: UIViewController)
     func didTapGoogleLoginButton(view: UIViewController)
+    func didTapAppleLoginButton(view: UIViewController)
     var email: String? {get set}
     var password: String? {get set}
     var rememberMeEnabled: Bool {get set}
@@ -60,6 +62,10 @@ class LoginPresenter: LoginPresenterProtocol {
     func didTapGoogleLoginButton(view: UIViewController) {
         service.loginWithGoogle(view: view)
     }
+    
+    func didTapAppleLoginButton(view: UIViewController) {
+        service.loginWithApple(view: view)
+    }
 }
 
 extension LoginPresenter: LoginServiceDelegate {
@@ -67,4 +73,3 @@ extension LoginPresenter: LoginServiceDelegate {
         self.coordinator?.openTestScreen()
     }
 }
-

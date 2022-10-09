@@ -9,6 +9,7 @@ import UIKit
 import TNCore
 import TNUI
 import FBSDKLoginKit
+import AuthenticationServices
 
 class LoginViewController: UIViewController {
 
@@ -21,7 +22,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var rememberMeButton: UIButton!
     
     var presenter: LoginPresenterProtocol?
-    //posso instanciar o logintextfield desta maneira ou precisa ser feito dependency injection
     let loginTextField = LoginTextField()
     
     init(presenter: LoginPresenterProtocol) {
@@ -66,6 +66,17 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func appleSignInButtonTapped(_ sender: Any) {
+        
+        let provider = ASAuthorizationAppleIDProvider()
+        let request = provider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        controller.performRequests()
+        
+        presenter?.didTapAppleLoginButton(view: self)
     }
     
     private func setupUI() {
@@ -103,6 +114,31 @@ extension LoginViewController: LoginTextFieldDelegate {
             passwordTextField.isSecureTextEntry = true
             loginTextField.passwordImage = Constants.hidePasswordImage
         }
+    }
+}
+
+extension LoginViewController: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("failed")
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        switch authorization.credential {
+        case let credentials as ASAuthorizationAppleIDCredential:
+            let firstName = credentials.fullName?.givenName
+            let lastName = credentials.fullName?.familyName
+            let email = credentials.email
+            print(firstName, lastName, email)
+            break
+        default:
+            break
+        }
+    }
+}
+
+extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return view.window!
     }
 }
 
