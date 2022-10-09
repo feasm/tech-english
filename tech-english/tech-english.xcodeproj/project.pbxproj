@@ -134,6 +134,7 @@
 		B148764028CFF36700543CF4 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		B148764128CFF36700543CF4 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		B148764228CFF36700543CF4 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		B17CB1A728EA3E8D001DA651 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		B1A1C99FF01CD14D28834766 /* Pods-tech-english.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tech-english.release.xcconfig"; path = "Target Support Files/Pods-tech-english/Pods-tech-english.release.xcconfig"; sourceTree = "<group>"; };
 		B8A9E1E1750F6ED5C0392367 /* Pods_tech_english_tech_englishUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tech_english_tech_englishUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -176,6 +177,7 @@
 				AF5EFE7D28C911C90011B923 /* Products */,
 				B97739BA092DE9B433EA7B6C /* Pods */,
 				FEF72EC6C8E397AE7E31ECAF /* Frameworks */,
+				AFAB912528F346B3006F0BF2 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,6 +238,14 @@
 				AF719A0F28C9152A00139BE5 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		AFAB912528F346B3006F0BF2 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				B17CB1A728EA3E8D001DA651 /* HomeKit.framework */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		B148762F28CFF32900543CF4 /* Assets */ = {
@@ -312,6 +322,8 @@
 			dependencies = (
 			);
 			name = "tech-english";
+			packageProductDependencies = (
+			);
 			productName = "tech-english";
 			productReference = AF5EFE7C28C911C90011B923 /* tech-english.app */;
 			productType = "com.apple.product-type.application";
@@ -387,6 +399,8 @@
 				Base,
 			);
 			mainGroup = AF5EFE7328C911C90011B923;
+			packageReferences = (
+			);
 			productRefGroup = AF5EFE7D28C911C90011B923 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -767,15 +781,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "tech-english/tech-english.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4XWMMXB4KD;
+				DEVELOPMENT_TEAM = NZ7Q8F9UNM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tech-english/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -783,6 +799,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.age.tech-english";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -796,15 +813,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "tech-english/tech-english.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4XWMMXB4KD;
+				DEVELOPMENT_TEAM = NZ7Q8F9UNM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tech-english/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -812,6 +831,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.age.tech-english";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -13,6 +13,7 @@ def externalPods
   pod 'RealmSwift'
   pod 'FBSDKLoginKit'
   pod 'FacebookLogin'
+  pod 'GoogleSignIn'
   
   #  pod 'RealmDatabase'
   #  pod 'GoogleSignIn'
