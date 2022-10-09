@@ -12,6 +12,7 @@ import TNCore
 
 import Authentication
 import SampleModule
+import Onboarding
 
 final class AppCoordinator: Coordinator {
     
@@ -31,7 +32,8 @@ final class AppCoordinator: Coordinator {
         window?.makeKeyAndVisible()
         
 //        let coordinator = UserSelectionFeatureCoordinator(navigationController: navigationViewController)
-        let coordinator = LoginCoordinator(navigationController: navigationViewController)
+//        let coordinator = LoginCoordinator(navigationController: navigationViewController)
+        let coordinator = OnboardCoordinator(navigationController: navigationViewController)
         coordinator.start()
     }
     

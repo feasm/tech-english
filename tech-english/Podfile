@@ -4,8 +4,10 @@
 def projectPods
   pod 'TNUI', :path => './Development Pods/TNUI'
   pod 'TNCore', :path => './Development Pods/TNCore'
+  
   pod 'SampleModule', :path => './Development Pods/SampleModule'
   pod 'Authentication', :path => './Development Pods/Authentication'
+  pod 'Onboarding', :path => './Development Pods/Onboarding'
 end
 
 def externalPods
@@ -14,6 +16,8 @@ def externalPods
   pod 'FBSDKLoginKit'
   pod 'FacebookLogin'
   pod 'GoogleSignIn'
+  
+  pod 'TLCustomMask'
   
   #  pod 'RealmDatabase'
   #  pod 'GoogleSignIn'

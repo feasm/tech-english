@@ -1,14 +1,14 @@
 //
-//  LoginCoordinator.swift
+//  OnboardCoordinator.swift
 //  tech-english
 //
-//  Created by William Reinert on 11/09/22.
+//  Created by Gustavo Domingues on 26/09/22.
 //
 
 import Foundation
 import UIKit
 
-final class LoginCoordinator: Coordinator {
+final class OnboardCoordinator: Coordinator {
     
     var currentViewController: UIViewController?
     var navigationViewController: UINavigationController?
@@ -18,17 +18,17 @@ final class LoginCoordinator: Coordinator {
     }
     
     func start() {
-//       let loginViewController = LoginViewController()
+//      let viewController = OnboardViewController()
+        let viewController = OnboardLevel()
+
+       navigationViewController?.pushViewController(viewController, animated: true)
+         //showRegisterName()
+    }
+//    func showRegisterName() {
+//        let viewController = RegisterNameViewController()
 //
-//       navigationViewController?.pushViewController(loginViewController, animated: true)
-         showRegisterName()
-    }
-    func showRegisterName() {
-        let registerViewController = RegisterNameViewController()
-        
-        navigationViewController?.pushViewController(registerViewController, animated: true)
-    }
-    
+//        navigationViewController?.pushViewController(viewController, animated: true)
+//    }
 }
 
 //extension UserSelectionFeatureCoordinator: SelectUsersCoordinator {
