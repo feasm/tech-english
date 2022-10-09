@@ -1,0 +1,6 @@
+use_frameworks!
+target 'Onboarding_Tests' do
+  pod 'Onboarding', :path => '../'
+  
+  
+end

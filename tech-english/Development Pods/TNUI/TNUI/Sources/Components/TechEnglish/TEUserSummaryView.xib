@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TEUserSummaryView" customModule="TNUI">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-dg-Ue6">
+                    <rect key="frame" x="18" y="18" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="gVc-dg-Ue6" secondAttribute="height" multiplier="1:1" id="ba0-RZ-xWm"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aQc-v0-w46">
+                    <rect key="frame" x="77.999999999999986" y="26" width="137.66666666666663" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZ0-uJ-NdN">
+                            <rect key="frame" x="0.0" y="0.0" width="137.66666666666666" height="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="john-doe@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcA-Yv-o3x">
+                            <rect key="frame" x="0.0" y="17" width="137.66666666666666" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gG9-2h-xV8">
+                    <rect key="frame" x="347" y="27.666666666666671" width="51" height="31"/>
+                    <color key="onTintColor" name="SecondaryBlue"/>
+                    <color key="thumbTintColor" name="PrimaryBlue"/>
+                    <connections>
+                        <action selector="didTapSwitch:" destination="iN0-l3-epB" eventType="valueChanged" id="gr1-WE-mz8"/>
+                    </connections>
+                </switch>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gVc-dg-Ue6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="80B-ZO-oRk"/>
+                <constraint firstAttribute="bottom" secondItem="gVc-dg-Ue6" secondAttribute="bottom" constant="18" id="HL3-1E-4zI"/>
+                <constraint firstItem="gG9-2h-xV8" firstAttribute="centerY" secondItem="gVc-dg-Ue6" secondAttribute="centerY" id="IhL-8F-rJy"/>
+                <constraint firstItem="aQc-v0-w46" firstAttribute="leading" secondItem="gVc-dg-Ue6" secondAttribute="trailing" constant="10" id="OXz-d9-h8n"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gG9-2h-xV8" secondAttribute="trailing" constant="18" id="Sc0-Sy-sEj"/>
+                <constraint firstItem="aQc-v0-w46" firstAttribute="centerY" secondItem="gVc-dg-Ue6" secondAttribute="centerY" id="Vrb-yQ-hgD"/>
+                <constraint firstItem="gVc-dg-Ue6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="hJc-51-NHp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="activeSwitch" destination="gG9-2h-xV8" id="i9T-rB-u3O"/>
+                <outlet property="descriptionLabel" destination="JcA-Yv-o3x" id="GkY-Me-jrG"/>
+                <outlet property="titleLabel" destination="hZ0-uJ-NdN" id="KoU-ZL-712"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="144"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="user_avatar" width="50" height="50"/>
+        <namedColor name="PrimaryBlue">
+            <color red="0.11800000071525574" green="0.3919999897480011" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryBlue">
+            <color red="0.7369999885559082" green="0.81999999284744263" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

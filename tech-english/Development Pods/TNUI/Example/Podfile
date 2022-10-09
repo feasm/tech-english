@@ -1,0 +1,6 @@
+use_frameworks!
+target 'TNUI_Tests' do
+  pod 'TNUI', :path => '../'
+  
+  
+end
