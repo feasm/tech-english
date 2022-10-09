@@ -18,16 +18,17 @@ final class LoginCoordinator: Coordinator {
     }
     
     func start() {
-//       let viewController = LoginViewController()
-//        
-//       navigationViewController?.pushViewController(viewController, animated: true)
+//       let loginViewController = LoginViewController()
+//
+//       navigationViewController?.pushViewController(loginViewController, animated: true)
          showRegisterName()
     }
     func showRegisterName() {
-        let viewController = RegisterNameViewController()
+        let registerViewController = RegisterNameViewController()
         
-        navigationViewController?.pushViewController(viewController, animated: true)
+        navigationViewController?.pushViewController(registerViewController, animated: true)
     }
+    
 }
 
 //extension UserSelectionFeatureCoordinator: SelectUsersCoordinator {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TNUI
 
 class RegisterNameViewController: UIViewController {
     
@@ -69,12 +70,12 @@ class RegisterNameViewController: UIViewController {
     @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if nextButton.frame.origin.y != originalYButton {
-                self.nextButton.frame.origin.y = originalYButton
+               self.nextButton.frame.origin.y = originalYButton
             }
         }
     }
 
-    }
+}
 
 
 

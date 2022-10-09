@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import TNUI
 
 class LoginViewController: UIViewController {
 
+    var coordinator: LoginCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +39,9 @@ class LoginViewController: UIViewController {
         passwordTextField.rightView?.addGestureRecognizer(tapGesture)
     }
     
+    @IBAction func PressedSignUpButton(_ sender: Any) {
+        coordinator?.showRegisterName()
+    }
     @objc func handleTogglePasswordButtonTapped(sender: UIGestureRecognizer) {
         if passwordTextField.isSecureTextEntry == true {
             passwordTextField.isSecureTextEntry = false
