@@ -8,12 +8,11 @@
 import Foundation
 import UIKit
 
-protocol Coordinator {
-    var currentViewController: UIViewController? { get }
-    var navigationViewController: UINavigationController? { get }
-    
-    func start()
-}
+import TNCore
+
+import Authentication
+import SampleModule
+import Onboarding
 
 final class AppCoordinator: Coordinator {
     
@@ -27,12 +26,14 @@ final class AppCoordinator: Coordinator {
     
     func start() {
         navigationViewController = UINavigationController()
+        navigationViewController?.setNavigationBarHidden(true, animated: false)
         
         window?.rootViewController = navigationViewController
         window?.makeKeyAndVisible()
         
 //        let coordinator = UserSelectionFeatureCoordinator(navigationController: navigationViewController)
-        let coordinator = LoginCoordinator(navigationController: navigationViewController)
+//        let coordinator = LoginCoordinator(navigationController: navigationViewController)
+        let coordinator = OnboardCoordinator(navigationController: navigationViewController)
         coordinator.start()
     }
     

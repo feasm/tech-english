@@ -1,0 +1,6 @@
+use_frameworks!
+target 'Authentication_Tests' do
+  pod 'Authentication', :path => '../'
+  
+  
+end
