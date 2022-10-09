@@ -8,6 +8,8 @@
 import UIKit
 import FacebookCore
 
+import Authentication
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

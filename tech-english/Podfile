@@ -1,0 +1,43 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+def projectPods
+  pod 'TNUI', :path => './Development Pods/TNUI'
+  pod 'TNCore', :path => './Development Pods/TNCore'
+  pod 'SampleModule', :path => './Development Pods/SampleModule'
+  pod 'Authentication', :path => './Development Pods/Authentication'
+end
+
+def externalPods
+  pod 'Realm'
+  pod 'RealmSwift'
+  pod 'FBSDKLoginKit'
+  pod 'FacebookLogin'
+  
+  #  pod 'RealmDatabase'
+  #  pod 'GoogleSignIn'
+  #  pod 'AppAuth'
+  #  pod 'GTMAppAuth'
+  #  pod 'GTMSessionFetcher'
+end
+
+target 'tech-english' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Project Pods
+  projectPods()
+  
+  # Pods for tech-english
+  externalPods()
+  
+  target 'tech-englishTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'tech-englishUITests' do
+    # Pods for testing
+  end
+
+end

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import TNCore
+//import TNCore
 
 public protocol TEUserSummaryViewDelegate {
     func onSwitch(index: Int, isActive: Bool)

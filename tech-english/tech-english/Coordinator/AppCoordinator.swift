@@ -8,12 +8,10 @@
 import Foundation
 import UIKit
 
-protocol Coordinator {
-    var currentViewController: UIViewController? { get }
-    var navigationViewController: UINavigationController? { get }
-    
-    func start()
-}
+import TNCore
+
+import Authentication
+import SampleModule
 
 final class AppCoordinator: Coordinator {
     

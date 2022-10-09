@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import TNCore
+//import TNCore
 
 public class TEUserSummaryViewCell: UITableViewCell {
     
@@ -55,7 +55,7 @@ public class TEUserSummaryViewCell: UITableViewCell {
         
         guard let view = userSummaryView else { return }
         contentView.addSubview(view)
-        view.pinToSuperview()
+//        view.pinToSuperview()
     }
     
 }
