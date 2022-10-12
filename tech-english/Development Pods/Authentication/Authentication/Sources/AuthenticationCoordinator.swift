@@ -26,7 +26,7 @@ public final class LoginCoordinator: Coordinator {
         
         presenter.coordinator = self
         service.delegate = presenter
-        presenter.isUserAuthenticated()
+        presenter.isRememberMeEnabled()
         navigationViewController?.pushViewController(viewController, animated: true)
     }
 }
@@ -44,5 +44,9 @@ extension LoginCoordinator: LoginPresenterCoordinator {
         let viewController = RegisterNameViewController()
         
         navigationViewController?.pushViewController(viewController, animated: true)
+    }
+    
+    public func openOnboardingScreen() {
+        
     }
 }
