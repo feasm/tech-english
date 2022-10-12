@@ -35,19 +35,20 @@ class LoginViewController: TEBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
         loginTextField.loginTextFieldDelegate = self
         loginTextField.setupTextField(view: [emailTextField, passwordTextField])
+        print(UserDefaults.standard.bool(forKey: "rememberMeEnabled"))
     }
     
     @IBAction func rememberMeButtonPressed(_ sender: Any) {
         if rememberMeButton.currentImage == UIImage(systemName: "square") {
             rememberMeButton.setImage(UIImage(systemName: "square.fill"), for: .normal)
             presenter?.rememberMeEnabled = true
+            presenter?.setUserDefaults(value: true)
         } else {
             rememberMeButton.setImage(UIImage(systemName: "square"), for: .normal)
-            presenter?.rememberMeEnabled = false
+            presenter?.setUserDefaults(value: false)
         }
     }
 
@@ -66,15 +67,6 @@ class LoginViewController: TEBaseViewController {
     }
     
     @IBAction func appleSignInButtonTapped(_ sender: Any) {
-        let provider = ASAuthorizationAppleIDProvider()
-        let request = provider.createRequest()
-        request.requestedScopes = [.fullName, .email]
-        
-        let controller = ASAuthorizationController(authorizationRequests: [request])
-        controller.delegate = self
-        controller.presentationContextProvider = self
-        controller.performRequests()
-        
         presenter?.didTapAppleLoginButton(view: self)
     }
     
@@ -116,30 +108,12 @@ extension LoginViewController: LoginTextFieldDelegate {
     }
 }
 
-extension LoginViewController: ASAuthorizationControllerDelegate {
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("failed")
-    }
-    
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        switch authorization.credential {
-        case let credentials as ASAuthorizationAppleIDCredential:
-            let firstName = credentials.fullName?.givenName
-            let lastName = credentials.fullName?.familyName
-            let email = credentials.email
-            print(firstName, lastName, email)
-            break
-        default:
-            break
-        }
-    }
-}
-
 extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
-    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+    public func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return view.window!
     }
 }
+
 
 
 

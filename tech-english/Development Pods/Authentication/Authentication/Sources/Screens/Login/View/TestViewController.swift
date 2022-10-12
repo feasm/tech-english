@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import TNCore
+import TNUI
 
-class TestViewController: UIViewController {
+class TestViewController: TEBaseViewController {
 
     @IBAction func logOutButtonPressed(_ sender: Any) {
         LoginService().logOut()

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application,
             didFinishLaunchingWithOptions: launchOptions
         )
-//        return true
+        return true
         
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
@@ -70,10 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        //posso fazer isso??
-        let service = LoginService()
-        let presenter = LoginPresenter(service: service)
-        presenter.isRememberMeEnabled()
+        
     }
 }
 
