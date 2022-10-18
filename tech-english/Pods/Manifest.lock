@@ -40,11 +40,11 @@ PODS:
     - TLCustomMask
     - TNCore
     - TNUI
-  - Realm (10.31.0):
-    - Realm/Headers (= 10.31.0)
-  - Realm/Headers (10.31.0)
-  - RealmSwift (10.31.0):
-    - Realm (= 10.31.0)
+  - Realm (10.32.0):
+    - Realm/Headers (= 10.32.0)
+  - Realm/Headers (10.32.0)
+  - RealmSwift (10.32.0):
+    - Realm (= 10.32.0)
   - SampleModule (0.1.0):
     - TNCore
     - TNUI
@@ -103,8 +103,8 @@ SPEC CHECKSUMS:
   GTMAppAuth: 0ff230db599948a9ad7470ca667337803b3fc4dd
   GTMSessionFetcher: ffbb25ec00ebcb5201adab0a56d808f6f1902d9f
   Onboarding: 7048fe694c37617fd8c743fa4f894b7e89033adb
-  Realm: 10df7d86e1ca09d9948fdce2faa3fc623fb092c6
-  RealmSwift: aecc52389574be4d451bf6cb1b08824eaa17dad0
+  Realm: a00e93347b8d26d372c7a82f6c0b08d6536a21c8
+  RealmSwift: fe09c29ca409f8f905fe4086f2a52936193f2e3d
   SampleModule: 7d0127fe373ffadc23e72c5b27117dc41e8227de
   TLCustomMask: 32bcd873851167c2d2a3726b048766b737873710
   TNCore: bec6a82c013739fadcf6dc7065d7d86c4471a5a0
