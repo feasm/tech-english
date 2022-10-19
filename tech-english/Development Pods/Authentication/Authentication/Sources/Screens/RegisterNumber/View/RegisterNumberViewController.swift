@@ -39,9 +39,8 @@ class RegisterNumberViewController: TEBaseViewController, UITextFieldDelegate{
     
     
     private func updateUI(){
-        
         numberTextField.delegate = self
-        
+        numberTextField.keyboardType = .numberPad
         returnButton.setTitle("", for: .normal)
         
         let arrowImage = UIImage(named: "Arrowleft2.png")
@@ -70,9 +69,9 @@ class RegisterNumberViewController: TEBaseViewController, UITextFieldDelegate{
         
         let telNumber = numberTextField.text
         let telNumberLen = (telNumber?.count)!
-    
-        if telNumberLen < 13 {
-            errorText.text = "Numero Invalido"
+        
+        if telNumberLen < 15 {
+            errorText.text = "Número inválido"
         }
         else {
             errorText.text = ""
@@ -87,7 +86,7 @@ class RegisterNumberViewController: TEBaseViewController, UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return false }
         let newString = (text as NSString).replacingCharacters(in: range, with: string)
-        textField.text = format(with: "XX XXXXX-XXXX", phone: newString)
+        textField.text = format(with: "(XX) XXXXX-XXXX", phone: newString)
         return false
     }
 
