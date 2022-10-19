@@ -70,10 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        //posso fazer isso??
-        let service = LoginService()
-        let presenter = LoginPresenter(service: service)
-        presenter.isRememberMeEnabled()
+        
     }
 }
 

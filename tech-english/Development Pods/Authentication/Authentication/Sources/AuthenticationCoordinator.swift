@@ -1,5 +1,5 @@
 //
-//  LoginCoordinator.swift
+//  AuthenticationCoordinator.swift
 //  tech-english
 //
 //  Created by William Reinert on 11/09/22.
@@ -10,7 +10,7 @@ import UIKit
 
 import TNCore
 
-public final class LoginCoordinator: Coordinator {
+public final class AuthenticationCoordinator: Coordinator {
     
     public var currentViewController: UIViewController?
     public var navigationViewController: UINavigationController?
@@ -25,13 +25,14 @@ public final class LoginCoordinator: Coordinator {
         let viewController = LoginViewController(presenter: presenter)
         
         presenter.coordinator = self
+        presenter.delegate = viewController
         service.delegate = presenter
-        presenter.isUserAuthenticated()
+        presenter.isRememberMeEnabled()
         navigationViewController?.pushViewController(viewController, animated: true)
     }
 }
 
-extension LoginCoordinator: LoginPresenterCoordinator {
+extension AuthenticationCoordinator: LoginPresenterCoordinator {
     public func openTestScreen() {
         let viewController = TestViewController()
         
@@ -44,5 +45,9 @@ extension LoginCoordinator: LoginPresenterCoordinator {
         let viewController = RegisterNameViewController()
         
         navigationViewController?.pushViewController(viewController, animated: true)
+    }
+    
+    public func openOnboardingScreen() {
+        
     }
 }

@@ -28,15 +28,16 @@ public protocol LoginServiceProtocol {
 
 protocol LoginServiceDelegate: AnyObject {
     func didLoginSuccessfully()
+    func didFailToLogin()
 }
 
-public class LoginService: LoginServiceProtocol {
+public class LoginService: NSObject, LoginServiceProtocol {
     
     let loginManager = LoginManager()
     let googleClientID = GIDConfiguration(clientID: Constants.googleClientID)
     weak var delegate: LoginServiceDelegate?
     
-    public init() {}
+    public override init() {}
     
     private func login(with credentials: Credentials, _ completion: @escaping LoginCompletion) {
         app.login(credentials: credentials) { result in
@@ -60,6 +61,7 @@ public class LoginService: LoginServiceProtocol {
                 switch result {
                 case .failure(let error):
                     print("Login failed: \(error.localizedDescription)")
+                    self.delegate?.didFailToLogin()
                 case .success(let user):
                     print("Login successful with email as user \(user)")
                     self.delegate?.didLoginSuccessfully()
@@ -126,6 +128,15 @@ public class LoginService: LoginServiceProtocol {
     
     public func loginWithApple(view: UIViewController) {
         
+        let provider = ASAuthorizationAppleIDProvider()
+        let request = provider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = view as? ASAuthorizationControllerDelegate
+        controller.presentationContextProvider = view as? ASAuthorizationControllerPresentationContextProviding
+        controller.performRequests()
+        
         let credentials = Credentials.apple(idToken: "com.age.tech-english")
         self.login(with: credentials) { result in
             DispatchQueue.main.async {
@@ -148,6 +159,26 @@ public class LoginService: LoginServiceProtocol {
         })
     }
 }
+
+extension LoginService: ASAuthorizationControllerDelegate {
+    public func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("failed")
+    }
+    
+    public func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        switch authorization.credential {
+        case let credentials as ASAuthorizationAppleIDCredential:
+            let firstName = credentials.fullName?.givenName
+            let lastName = credentials.fullName?.familyName
+            let email = credentials.email
+            print(firstName, lastName, email)
+            break
+        default:
+            break
+        }
+    }
+}
+
 
 
 

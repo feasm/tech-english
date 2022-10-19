@@ -18,6 +18,7 @@ public protocol LoginPresenterCoordinator {
 
 protocol LoginPresenterProtocol {
     func isUserAuthenticated()
+    func setUserDefaults(value: Bool)
     
     func didTapLoginButton()
     func didTapSignUpButton()
@@ -31,14 +32,19 @@ protocol LoginPresenterProtocol {
     var rememberMeEnabled: Bool {get set}
 }
 
+protocol LoginPresenterDelegate: AnyObject {
+    func didProvideIncorrectCredentials()
+}
+
 public class LoginPresenter: LoginPresenterProtocol {
     
+    weak var delegate: LoginPresenterDelegate?
     var rememberMeEnabled: Bool = false
     var coordinator: LoginPresenterCoordinator?
     var service: LoginServiceProtocol
     var email: String?
     var password: String?
-    
+    let userDefaults = UserDefaults.standard
     
     public init(service: LoginServiceProtocol) {
         self.service = service
@@ -50,8 +56,14 @@ public class LoginPresenter: LoginPresenterProtocol {
         }
     }
     
-    public func isRememberMeEnabled() {
-        if rememberMeEnabled == false {
+    func setUserDefaults(value: Bool) {
+        userDefaults.set(value, forKey: "rememberMeEnabled")
+    }
+    
+    func isRememberMeEnabled() {
+        if userDefaults.bool(forKey: "rememberMeEnabled") {
+            isUserAuthenticated()
+        } else {
             service.logOut()
         }
     }
@@ -79,6 +91,13 @@ public class LoginPresenter: LoginPresenterProtocol {
 
 extension LoginPresenter: LoginServiceDelegate {
     func didLoginSuccessfully() {
+        if rememberMeEnabled == false {
+            userDefaults.set(false, forKey: "rememberMeEnabled")
+        }
         self.coordinator?.openTestScreen()
+    }
+    
+    func didFailToLogin() {
+        self.delegate?.didProvideIncorrectCredentials()
     }
 }
