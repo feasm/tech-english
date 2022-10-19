@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,12 +17,12 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterNumberViewController" customModule="tech_english" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterNumberViewController" customModule="Authentication" customModuleProvider="target">
             <connections>
                 <outlet property="divider" destination="W7R-B6-5TQ" id="cwO-ja-uvQ"/>
                 <outlet property="errorText" destination="uLw-aT-YUJ" id="ABV-gJ-s0f"/>
-                <outlet property="nameTextField" destination="ogV-ze-Gek" id="dP6-hN-hJd"/>
                 <outlet property="nextButton" destination="P7U-ps-p1Y" id="Pmn-2Y-prc"/>
+                <outlet property="numberTextField" destination="ogV-ze-Gek" id="WgS-OX-JgE"/>
                 <outlet property="returnButton" destination="UcT-dD-41S" id="4QS-fq-VwB"/>
                 <outlet property="signUpLabel" destination="QUf-zP-UAa" id="lSF-Z1-tpF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -70,7 +71,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qPP-Yp-mOK">
                                     <rect key="frame" x="0.0" y="25.5" width="366" height="34"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogV-ze-Gek">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogV-ze-Gek">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>

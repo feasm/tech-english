@@ -51,7 +51,10 @@ extension LoginCoordinator: LoginPresenterCoordinator {
 
 extension LoginCoordinator: RegisterNameCoordinator {
     public func openRegisterNumberScreen() {
+//        let presenter = RegisterNumberPresenter()
         let viewController = RegisterNumberViewController()
+        
+//        presenter.coordinator = self
         navigationViewController?.pushViewController(viewController, animated: true)
     }
 }

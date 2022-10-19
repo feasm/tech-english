@@ -10,7 +10,7 @@ import UIKit
 import TNUI
 import TNCore
 
-class RegisterNameViewController: TEBaseViewController, UITextFieldDelegate {
+class RegisterNameViewController: TEBaseViewController {
     
     var presenter: RegisterNamePresenterProtocol?
     
@@ -40,7 +40,6 @@ class RegisterNameViewController: TEBaseViewController, UITextFieldDelegate {
     
     private func updateUI(){
         
-        nameTextField.delegate = self
         
         returnButton.setTitle("", for: .normal)
         
@@ -80,30 +79,6 @@ class RegisterNameViewController: TEBaseViewController, UITextFieldDelegate {
         presenter?.didTapNextButton()
     }
 
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let text = textField.text else { return false }
-        let newString = (text as NSString).replacingCharacters(in: range, with: string)
-        textField.text = format(with: "XX XXXXX-XXXX", phone: newString)
-        return false
-    }
-
-    func format(with mask: String, phone: String) -> String {
-        let numbers = phone.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
-        var result = ""
-        var index = numbers.startIndex
-
-        for ch in mask where index < numbers.endIndex {
-            if ch == "X" {
-                result.append(numbers[index])
-
-                index = numbers.index(after: index)
-
-            } else {
-                result.append(ch)
-            }
-        }
-        return result
-    }
 
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
@@ -119,10 +94,3 @@ class RegisterNameViewController: TEBaseViewController, UITextFieldDelegate {
             }
         }
 }
-
-
-
-
-    
-        
-
