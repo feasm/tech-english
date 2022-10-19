@@ -11,6 +11,8 @@
 		0062DC694AEC5283D24CD31010981E2B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED889E39C00D782484D4E7F1D9425260 /* LoginModel.swift */; };
 		009229B029007B6800CCA071 /* RegisterNamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDA44D95CFFA96282424D42A23A12F /* RegisterNamePresenter.swift */; };
 		009229B429007E1700CCA071 /* AuthenticationAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 009229B329007E1700CCA071 /* AuthenticationAssets.xcassets */; };
+		009229BB290082B700CCA071 /* RegisterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009229B9290082B700CCA071 /* RegisterEmailViewController.swift */; };
+		009229BC290082B700CCA071 /* RegisterEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 009229BA290082B700CCA071 /* RegisterEmailViewController.xib */; };
 		00B15FCCA7CC12C15A13010614F01854 /* OIDURLQueryComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CDF6ED1A963F2B58DB9CAB1C9EF063 /* OIDURLQueryComponent.m */; };
 		012389E9DD2AF6FA0DDC7B0ED94A71EE /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE29D16DEA2C190EAA8BF11D3BD3EE6 /* GTMSessionFetcher.m */; };
 		027A62AB2B308C068F0221649C7FE3B1 /* TNCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC84298EFD53C612836283E68D77541 /* TNCore-dummy.m */; };
@@ -1339,6 +1341,8 @@
 		005703F3BB07502B7381FC0033808E4A /* FacebookLogin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FacebookLogin-prefix.pch"; sourceTree = "<group>"; };
 		008CFB2788652E66CB2D30B11810E3AE /* OIDScopes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopes.m; path = Source/AppAuthCore/OIDScopes.m; sourceTree = "<group>"; };
 		009229B329007E1700CCA071 /* AuthenticationAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AuthenticationAssets.xcassets; sourceTree = "<group>"; };
+		009229B9290082B700CCA071 /* RegisterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewController.swift; sourceTree = "<group>"; };
+		009229BA290082B700CCA071 /* RegisterEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterEmailViewController.xib; sourceTree = "<group>"; };
 		00CFD65892A1C1D015A18CDA89B1C892 /* RLMRealmConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealmConfiguration.h; path = include/RLMRealmConfiguration.h; sourceTree = "<group>"; };
 		00EC0DAA912D114A5A6F55DFBFA8E749 /* RLMRealm.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMRealm.mm; path = Realm/RLMRealm.mm; sourceTree = "<group>"; };
 		00FCFBE4F31D1FE6421C12AD6F054F79 /* FBSDKModalFormPresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKModalFormPresentationController.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Device/FBSDKModalFormPresentationController.h; sourceTree = "<group>"; };
@@ -2381,6 +2385,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		009229B62900813600CCA071 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		009229B72900813E00CCA071 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		009229B82900827F00CCA071 /* RegisterEmail */ = {
+			isa = PBXGroup;
+			children = (
+				009229B9290082B700CCA071 /* RegisterEmailViewController.swift */,
+				009229BA290082B700CCA071 /* RegisterEmailViewController.xib */,
+			);
+			path = RegisterEmail;
+			sourceTree = "<group>";
+		};
 		046DD61892175374AF962433B815C1F3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -2426,6 +2453,7 @@
 				4F92313FAF02EEC970EFCC6188A9BF7C /* Login */,
 				CF3FF6A73B84F0D7E5593DACAAC98D01 /* RegisterName */,
 				699C27BC3ECCBB229540D793F74A1C79 /* RegisterNumber */,
+				009229B82900827F00CCA071 /* RegisterEmail */,
 			);
 			name = Screens;
 			path = Authentication/Sources/Screens;
@@ -3158,8 +3186,9 @@
 		699C27BC3ECCBB229540D793F74A1C79 /* RegisterNumber */ = {
 			isa = PBXGroup;
 			children = (
-				1B330008448FF337309C18F5D7AABD00 /* Presenter */,
+				009229B72900813E00CCA071 /* Model */,
 				7C4A69D33C1514079660324ECD1BE680 /* View */,
+				1B330008448FF337309C18F5D7AABD00 /* Presenter */,
 			);
 			path = RegisterNumber;
 			sourceTree = "<group>";
@@ -3605,8 +3634,9 @@
 		CF3FF6A73B84F0D7E5593DACAAC98D01 /* RegisterName */ = {
 			isa = PBXGroup;
 			children = (
-				1F9A2EA01CE12410A5AE5FAEB244508C /* Presenter */,
+				009229B62900813600CCA071 /* Model */,
 				1785228A12EABEDD78485F5B54D224E8 /* View */,
+				1F9A2EA01CE12410A5AE5FAEB244508C /* Presenter */,
 			);
 			path = RegisterName;
 			sourceTree = "<group>";
@@ -5079,6 +5109,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				009229BC290082B700CCA071 /* RegisterEmailViewController.xib in Resources */,
 				009229B429007E1700CCA071 /* AuthenticationAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5370,6 +5401,7 @@
 				03E91788D00E167D25370EF6BEA40C3D /* RegisterNameViewController.swift in Sources */,
 				A67839032D110BE55DC5DC34C0095D3C /* RegisterNameViewController.xib in Sources */,
 				64A0AF4AB9B35EF112924182A75BB41E /* RegisterNumberViewController.swift in Sources */,
+				009229BB290082B700CCA071 /* RegisterEmailViewController.swift in Sources */,
 				03048E61B4F6910AE95C0CBB21F8EFA1 /* RegisterNumberViewController.xib in Sources */,
 				B0E969731F1FEAE7234FD49E84258F62 /* RegisterNumberPresenter.swift in Sources */,
 				B0E969731F1FEAE7234FD49E84258F62 /* RegisterNumberPresenter.swift in Sources */,

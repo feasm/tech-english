@@ -12,17 +12,17 @@ import TNCore
 
 class RegisterNumberViewController: TEBaseViewController, UITextFieldDelegate{
     
-//    var presenter: RegisterNumberPresenterProtocol?
-//    
-//    init(presenter: RegisterNumberPresenterProtocol) {
-//        self.presenter = presenter
-//        super.init()
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    var presenter: RegisterNumberPresenterProtocol?
     
+    init(presenter: RegisterNumberPresenterProtocol) {
+        self.presenter = presenter
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     @IBOutlet weak var signUpLabel: UILabel!
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var divider: UIImageView!
@@ -68,12 +68,20 @@ class RegisterNumberViewController: TEBaseViewController, UITextFieldDelegate{
     
     @IBAction func pressedNextButton(_ sender: UIButton) {
         
-        if numberTextField.text == "" {
-            errorText.text = "Este campo não pode estar vazio"
+        let telNumber = numberTextField.text
+        let telNumberLen = (telNumber?.count)!
+    
+        if telNumberLen < 13 {
+            errorText.text = "Numero Invalido"
         }
         else {
             errorText.text = ""
+            nextButtonTapped()
         }
+    }
+    
+    func nextButtonTapped() {
+        presenter?.didTapNextButton()
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

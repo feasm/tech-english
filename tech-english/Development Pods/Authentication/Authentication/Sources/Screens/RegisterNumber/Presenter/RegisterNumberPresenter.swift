@@ -10,13 +10,17 @@ import UIKit
 import TNCore
 
 public protocol RegisterNumberCoordinator {
-    
+    func openRegisterEmailScreen()
 }
 
 protocol RegisterNumberPresenterProtocol {
-    
+    func didTapNextButton()
 }
 
 public class RegisterNumberPresenter: RegisterNumberPresenterProtocol {
+    var coordinator: RegisterNumberCoordinator?
     
+    func didTapNextButton() {
+        coordinator?.openRegisterEmailScreen()
+    }
 }
