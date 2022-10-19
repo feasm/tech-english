@@ -10,14 +10,24 @@ import TLCustomMask
 
 import TNCore
 
-class OnboardViewController: TEBaseViewController, UITextFieldDelegate {
+class OnboardViewController: TEBaseViewController {
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var dataText: UITextField!
     @IBOutlet weak var principalLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     var buttonConstraint: CGFloat = 0
-    var customMask = TLCustomMask(formattingPattern: "$$/$$/$$$$")
-    var presenter = OnboardPresenter()
+    var dataMask = TLCustomMask(formattingPattern: "$$/$$/$$$$")
+    var nickMask = TLCustomMask(formattingPattern: "*************************")
+    var presenter: OnboardPresenter?
+    
+    init(presenter: OnboardPresenter) {
+        self.presenter = presenter
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +50,8 @@ class OnboardViewController: TEBaseViewController, UITextFieldDelegate {
         }
         if dataText.text != ""{
             if let data = dataText.text {
-                presenter.birthData = data
-                print(presenter.birthData ?? "Teste Falho")
+                presenter?.birthData = data
+                print(presenter?.birthData ?? "Teste Falho")
             }
         }
         if nameText.text == "" {
@@ -49,10 +59,16 @@ class OnboardViewController: TEBaseViewController, UITextFieldDelegate {
         }
         if nameText.text != ""{
             if let name = nameText.text {
-                presenter.userName = name
-                print(presenter.userName ?? "Teste Falho")
+                presenter?.userName = name
+                print(presenter?.userName ?? "Teste Falho")
             }
         }
+//        && Function
+            nextOnboardScreen()
+    }
+    
+    func nextOnboardScreen() {
+        presenter?.didTapNextButton()
     }
     
     private func textFieldDidEndEditing(textField: UITextField) -> Bool {
@@ -74,8 +90,8 @@ class OnboardViewController: TEBaseViewController, UITextFieldDelegate {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y == 0 {
                 let height = keyboardSize.height
-                nextButton.frame.origin.y -= height
-                view.frame.origin.y -= height
+                nextButton.frame.origin.y -= nextButton.frame.origin.y + 125
+                view.frame.origin.y = buttonConstraint
             }
         }
     }
@@ -83,21 +99,23 @@ class OnboardViewController: TEBaseViewController, UITextFieldDelegate {
     @objc func keyboardWillHide(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if view.frame.origin.y != 0 {
-                let height = keyboardSize.height
-                nextButton.frame.origin.y += height
+            if nextButton.frame.origin.y != buttonConstraint {
+                nextButton.frame.origin.y = buttonConstraint
                 view.frame.origin.y = 0
                 
             }
         }
     }
+}
+extension OnboardViewController: UITextFieldDelegate{
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
 
-        dataText.text = customMask.formatStringWithRange(range: range, string: string)
-        return false
-    }
+            dataText.text = dataMask.formatStringWithRange(range: range, string: string)
+        nameText.text = nickMask.formatStringWithRange(range: range, string: string)
+            return false
+        }
 }
 
     

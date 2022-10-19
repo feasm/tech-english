@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 import TNCore
 
 class OnboardLevel: TEBaseViewController {
@@ -15,7 +14,7 @@ class OnboardLevel: TEBaseViewController {
     @IBOutlet weak var intermedButton: UIButton!
     @IBOutlet weak var avancedButton: UIButton!
     
-    var presenter = OnboardLevelPresenter()
+    var presenter: OnboardLevelPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,24 +24,14 @@ class OnboardLevel: TEBaseViewController {
     @IBAction func levelButtonPressed(_ sender: UIButton) {
         switch sender {
             case basicButton:
-                presenter.lvlUser = "Básico"
+                presenter?.lvlUser = "Básico"
             case intermedButton:
-                presenter.lvlUser = "Intermediario"
+                presenter?.lvlUser = "Intermediario"
             case avancedButton:
-                presenter.lvlUser = "Avançado"
+                presenter?.lvlUser = "Avançado"
                 default:
                     print("Unknown Button")
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

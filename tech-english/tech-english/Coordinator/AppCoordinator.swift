@@ -33,7 +33,7 @@ final class AppCoordinator: Coordinator {
         
 //        let coordinator = UserSelectionFeatureCoordinator(navigationController: navigationViewController)
 //        let coordinator = LoginCoordinator(navigationController: navigationViewController)
-        let coordinator = OnboardCoordinator(navigationController: navigationViewController)
+        let coordinator = OnboardingCoordinator(navigationController: navigationViewController)
         coordinator.start()
     }
     

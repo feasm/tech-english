@@ -8,5 +8,11 @@
 import Foundation
 
 class OnboardLevelPresenter {
+    
     var lvlUser: String?
+    var service: OnboardingLevelService
+    
+    public init(service: OnboardingLevelService) {
+        self.service = service
+    }
 }
