@@ -23,6 +23,7 @@ class LoginViewController: TEBaseViewController {
     
     var presenter: LoginPresenterProtocol?
     let loginTextField = LoginTextField()
+    var customView: NotificationComponentView!
     
     init(presenter: LoginPresenterProtocol) {
         self.presenter = presenter
@@ -35,10 +36,11 @@ class LoginViewController: TEBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
+        
         loginTextField.loginTextFieldDelegate = self
         loginTextField.setupTextField(view: [emailTextField, passwordTextField])
-        print(UserDefaults.standard.bool(forKey: "rememberMeEnabled"))
     }
     
     @IBAction func rememberMeButtonPressed(_ sender: Any) {
@@ -111,6 +113,13 @@ extension LoginViewController: LoginTextFieldDelegate {
 extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
     public func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return view.window!
+    }
+}
+
+extension LoginViewController: LoginPresenterDelegate {
+    func didProvideIncorrectCredentials() {
+        self.customView = NotificationComponentView(warningText: "Usuario/senha nao correspondem", isError: true)
+        self.view.addSubview(self.customView!)
     }
 }
 

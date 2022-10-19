@@ -25,6 +25,7 @@ public final class AuthenticationCoordinator: Coordinator {
         let viewController = LoginViewController(presenter: presenter)
         
         presenter.coordinator = self
+        presenter.delegate = viewController
         service.delegate = presenter
         presenter.isRememberMeEnabled()
         navigationViewController?.pushViewController(viewController, animated: true)

@@ -32,8 +32,13 @@ protocol LoginPresenterProtocol {
     var rememberMeEnabled: Bool {get set}
 }
 
+protocol LoginPresenterDelegate: AnyObject {
+    func didProvideIncorrectCredentials()
+}
+
 public class LoginPresenter: LoginPresenterProtocol {
     
+    weak var delegate: LoginPresenterDelegate?
     var rememberMeEnabled: Bool = false
     var coordinator: LoginPresenterCoordinator?
     var service: LoginServiceProtocol
@@ -53,8 +58,6 @@ public class LoginPresenter: LoginPresenterProtocol {
     
     func setUserDefaults(value: Bool) {
         userDefaults.set(value, forKey: "rememberMeEnabled")
-        print(userDefaults.value(forKey: "rememberMeEnabled"))
-        print(userDefaults.bool(forKey: "rememberMeEnabled"))
     }
     
     func isRememberMeEnabled() {
@@ -92,6 +95,9 @@ extension LoginPresenter: LoginServiceDelegate {
             userDefaults.set(false, forKey: "rememberMeEnabled")
         }
         self.coordinator?.openTestScreen()
-        
+    }
+    
+    func didFailToLogin() {
+        self.delegate?.didProvideIncorrectCredentials()
     }
 }

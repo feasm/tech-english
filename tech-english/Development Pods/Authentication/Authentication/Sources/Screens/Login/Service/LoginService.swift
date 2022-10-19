@@ -28,6 +28,7 @@ public protocol LoginServiceProtocol {
 
 protocol LoginServiceDelegate: AnyObject {
     func didLoginSuccessfully()
+    func didFailToLogin()
 }
 
 public class LoginService: NSObject, LoginServiceProtocol {
@@ -60,6 +61,7 @@ public class LoginService: NSObject, LoginServiceProtocol {
                 switch result {
                 case .failure(let error):
                     print("Login failed: \(error.localizedDescription)")
+                    self.delegate?.didFailToLogin()
                 case .success(let user):
                     print("Login successful with email as user \(user)")
                     self.delegate?.didLoginSuccessfully()

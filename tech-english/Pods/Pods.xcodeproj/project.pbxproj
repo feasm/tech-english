@@ -260,7 +260,7 @@
 		4F946BDAF67AEB0533B15EA17DD4ED88 /* RLMMigration.h in Headers */ = {isa = PBXBuildFile; fileRef = DBDDCE7E93BB5CA7E4924CB015FA2052 /* RLMMigration.h */; };
 		4FABFB7574D65348A391ED298CCF1C20 /* GIDSignInButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 9631666D378FEED567AC5DF864FD2FC5 /* GIDSignInButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4FEE8CED618BD1F2B9857EC30D2156D2 /* RLMManagedDictionary.mm in Sources */ = {isa = PBXBuildFile; fileRef = 82E4EEF73937FF91C5D7BAA0BC29B515 /* RLMManagedDictionary.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"10.31.0\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
-		5015129C7711252999AC9C6FFB155C48 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED889E39C00D782484D4E7F1D9425260 /* LoginModel.swift */; };
+		5015129C7711252999AC9C6FFB155C48 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED889E39C00D782484D4E7F1D9425260 /* UserInfo.swift */; };
 		5019361433D4A97CB157FF6D1006C836 /* FBSDKLoginUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D769F0C1E9F6AE868309A7A49F2EF5 /* FBSDKLoginUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		505314C63C2152BB4D0E01AD282C1ED9 /* GTMAppAuthFetcherAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C86F223B2DF2A5E3FE4886376A6EE049 /* GTMAppAuthFetcherAuthorization.m */; };
 		508FE01046AA2E433863F66E0792D2B4 /* zh_TW.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 16BFF460E4BF86545792834FD8D2D0ED /* zh_TW.lproj */; };
@@ -567,8 +567,12 @@
 		AFA32D5FC3B755B06240995506967A38 /* FBProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC492B169C69C127E1BEFE25619DF132 /* FBProfilePictureView.swift */; };
 		B00F95EA9678805BF30C83472579CC7C /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = BEFFB1B5BAE002A688BD3149DC0350B5 /* de.lproj */; };
 		B0D367D070ADB0618BE4611700AD70F1 /* _FBSDKLoginRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DFADBAD2494A92EEE70CBE957B5433 /* _FBSDKLoginRecoveryAttempter.m */; };
+		B1A7D54D28F7877F003A6375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A7D54C28F7877F003A6375 /* Assets.xcassets */; };
+		B1A7D55428FAE6C0003A6375 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A7D55328FAE6C0003A6375 /* NibView.swift */; };
 		B1ECD5D4EB0BBD5B2F1E03E2685A08CC /* FBSDKBridgeAPIProtocolWebV1.h in Headers */ = {isa = PBXBuildFile; fileRef = 91854A4E22CA3972FD6FAF07BE86072B /* FBSDKBridgeAPIProtocolWebV1.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B1F0B3B528F365FB00770316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F0B3B428F365FB00770316 /* Assets.xcassets */; };
+		B1F70D6828FB7B6E00777F8B /* NotificationComponentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1F70D6628FB7B6D00777F8B /* NotificationComponentView.xib */; };
+		B1F70D6928FB7B6E00777F8B /* NotificationComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F70D6728FB7B6E00777F8B /* NotificationComponentView.swift */; };
 		B21A15F30BABE835E21699D8D9116741 /* GIDSignInStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA149CE9643CC5173B6AB882BF51E5 /* GIDSignInStrings.m */; };
 		B23AB5C8EF6B9B7AA00C0B3DE19002B0 /* FBSDKTimeSpentData.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9D3AF979F0A08476EE629070BBC974 /* FBSDKTimeSpentData.m */; };
 		B25D30D52D5A1EA86D7A8F8C656DCB67 /* RLMArray_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 25F36A019A276BED8D8BA9F0276E0E6B /* RLMArray_Private.h */; };
@@ -1927,7 +1931,11 @@
 		B0B5A7DB2AEB28C4583D84DB0423B3A2 /* RLMSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSet.h; path = include/RLMSet.h; sourceTree = "<group>"; };
 		B1396492E8CD4E65F930D3958EE48AB7 /* GoogleSignIn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GoogleSignIn.h; path = GoogleSignIn/Sources/Public/GoogleSignIn/GoogleSignIn.h; sourceTree = "<group>"; };
 		B13F222D77C5F5F8242F580E37F4DD30 /* FBSDKGraphRequestMetadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKGraphRequestMetadata.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequestMetadata.m; sourceTree = "<group>"; };
+		B1A7D54C28F7877F003A6375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1A7D55328FAE6C0003A6375 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		B1F0B3B428F365FB00770316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1F70D6628FB7B6D00777F8B /* NotificationComponentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationComponentView.xib; sourceTree = "<group>"; };
+		B1F70D6728FB7B6E00777F8B /* NotificationComponentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationComponentView.swift; sourceTree = "<group>"; };
 		B2097A822B9B1F2074F4B03A676E5600 /* FBSDKImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKImageDownloader.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKImageDownloader.m; sourceTree = "<group>"; };
 		B27EDE316EDCEED2BA59032D2FA72400 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = GoogleSignIn/Sources/Strings/en.lproj; sourceTree = "<group>"; };
 		B29A9A16FAB53C9B03D07A0202BF3B4C /* Onboarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Onboarding.debug.xcconfig; sourceTree = "<group>"; };
@@ -2142,7 +2150,7 @@
 		ED0B81448F406386F8422A39495252A7 /* Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Optional.swift; path = RealmSwift/Optional.swift; sourceTree = "<group>"; };
 		ED69D1E9E3F4AE341DA927AECE5F1B1C /* RLMProviderClient.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMProviderClient.mm; path = Realm/RLMProviderClient.mm; sourceTree = "<group>"; };
 		ED8706C8682E43E95C6E9CAEB67C35D4 /* RLMUpdateResult.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMUpdateResult.mm; path = Realm/RLMUpdateResult.mm; sourceTree = "<group>"; };
-		ED889E39C00D782484D4E7F1D9425260 /* LoginModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		ED889E39C00D782484D4E7F1D9425260 /* UserInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		ED9EF63945B2D9FDDB6A902C99CD8910 /* RLMFindOneAndModifyOptions.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMFindOneAndModifyOptions.mm; path = Realm/RLMFindOneAndModifyOptions.mm; sourceTree = "<group>"; };
 		EDBDE412BC2A510F2C034358CAAC422F /* RLMRealmUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMRealmUtil.mm; path = Realm/RLMRealmUtil.mm; sourceTree = "<group>"; };
 		EE7F06974BD85DA4CBD0FB137A468C2F /* FBSDKBridgeAPIProtocolNativeV1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBridgeAPIProtocolNativeV1.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/ProtocolVersions/FBSDKBridgeAPIProtocolNativeV1.h; sourceTree = "<group>"; };
@@ -3554,9 +3562,13 @@
 		C6577A1ED692F47F3988928339C08976 /* TechEnglish */ = {
 			isa = PBXGroup;
 			children = (
+				B1F70D6728FB7B6E00777F8B /* NotificationComponentView.swift */,
+				B1F70D6628FB7B6D00777F8B /* NotificationComponentView.xib */,
 				B3A381D25975F0E3EBE35B2A7848D2D1 /* TEUserSummaryView.swift */,
 				614CB0D0089303CE4A7A989A33A4325B /* TEUserSummaryView.xib */,
 				98F9854DAE5A78C6E286B119185526CB /* TEUserSummaryViewCell.swift */,
+				B1A7D54C28F7877F003A6375 /* Assets.xcassets */,
+				B1A7D55328FAE6C0003A6375 /* NibView.swift */,
 			);
 			path = TechEnglish;
 			sourceTree = "<group>";
@@ -3832,7 +3844,7 @@
 		EF885F687DA84F66F81894A607E58FA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ED889E39C00D782484D4E7F1D9425260 /* LoginModel.swift */,
+				ED889E39C00D782484D4E7F1D9425260 /* UserInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -4886,6 +4898,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A7D54D28F7877F003A6375 /* Assets.xcassets in Resources */,
+				B1F70D6828FB7B6E00777F8B /* NotificationComponentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5157,10 +5171,12 @@
 				B2ED1AD388BFE20ECEA2F4EAE422CF09 /* LoginTextField.swift in Sources */,
 				6848795065CF4673B8268FF9DF3CB061 /* TEUserSummaryView.swift in Sources */,
 				8C2ADF554D5AE561D01C5DA8FA3EA27F /* TEUserSummaryView.xib in Sources */,
+				B1F70D6928FB7B6E00777F8B /* NotificationComponentView.swift in Sources */,
 				588D5CB3C5959BE3AB6E94D6E7CFF4EF /* TEUserSummaryViewCell.swift in Sources */,
 				1C153EA5E44AD7933B5552CD1EDB09EF /* TNColors.swift in Sources */,
 				22A6FDD09A43E0E6B77F6D06C87C96D5 /* TNFonts.swift in Sources */,
 				C9B01C81080EFF19E5A96DCCA810281B /* TNUI-dummy.m in Sources */,
+				B1A7D55428FAE6C0003A6375 /* NibView.swift in Sources */,
 				30EA535604DFA4FB3C488E392BF28C12 /* UIView+extensions.swift in Sources */,
 				333B2A43213CB816BB99F2A36768F21A /* ViewControllerPreview.swift in Sources */,
 				743E762B8DB1BCAB8B2B81CA5F42C213 /* ViewPreview.swift in Sources */,
@@ -5237,7 +5253,7 @@
 			files = (
 				54DE853197B8514CB187F15346CBCB11 /* Authentication-dummy.m in Sources */,
 				9DDC632381CB98990779C6C3C405E801 /* AuthenticationCoordinator.swift in Sources */,
-				5015129C7711252999AC9C6FFB155C48 /* LoginModel.swift in Sources */,
+				5015129C7711252999AC9C6FFB155C48 /* UserInfo.swift in Sources */,
 				ADFDC9AD9D25C740680E8E2482B7B062 /* LoginPresenter.swift in Sources */,
 				35F7E81440C9CFC8EB1358C1EFBA02BD /* LoginService.swift in Sources */,
 				3750756FFAE4901E24D83AA6EECCBB6A /* LoginViewController.swift in Sources */,
