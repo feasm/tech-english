@@ -7,10 +7,12 @@
 
 import Foundation
 
+
+
 class OnboardingLevelPresenter {
     
-    var lvlUser: String?
-    var service: OnboardingLevelService
+    var levelUser: String?
+    var service: OnboardingLevelService?
     
     public init(service: OnboardingLevelService) {
         self.service = service

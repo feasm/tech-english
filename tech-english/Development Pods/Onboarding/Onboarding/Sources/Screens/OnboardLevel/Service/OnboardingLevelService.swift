@@ -11,7 +11,4 @@ public class OnboardingLevelService {
     
     let app = App(id: Constants.appID)
     
-//    func saveInfo() {
-//        app.
-//    }
 }

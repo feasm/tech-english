@@ -61,10 +61,10 @@
                     </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0QX-cL-EiF">
-                    <rect key="frame" x="29" y="343" width="224" height="20"/>
+                    <rect key="frame" x="29" y="343" width="317" height="20"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como você quer ser chamado?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpj-3L-voP">
-                            <rect key="frame" x="0.0" y="0.0" width="224" height="20"/>
+                            <rect key="frame" x="0.0" y="0.0" width="317" height="20"/>
                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -111,10 +111,10 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lIY-9v-fWZ">
-                    <rect key="frame" x="24" y="690" width="234" height="44"/>
+                    <rect key="frame" x="24" y="690" width="327" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPg-wn-LFb">
-                            <rect key="frame" x="0.0" y="0.0" width="234" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="ZCF-XH-nDT"/>
                             </constraints>

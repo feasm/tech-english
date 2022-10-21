@@ -129,7 +129,7 @@
 		258C63C332AF3767A5140FF91E3A0026 /* FBSDKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CB0BE133ACAF0FB070629107FB658C /* FBSDKCrypto.m */; };
 		25DFDA9E914F1282CC5A369B0C04CD7C /* RLMSwiftValueStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2D9D4E7D43AF4398C5CAE904EA7317 /* RLMSwiftValueStorage.h */; };
 		26150D35BF8EB6A4E154D07DD7449CA5 /* GTMKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 99BBF1D0B8FA0FAA34F041112CAA52C8 /* GTMKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		268915B333D39A867DEE21E62D61542A /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735A51787C44E900F4364C3513E2D303 /* OnboardViewController.swift */; };
+		268915B333D39A867DEE21E62D61542A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735A51787C44E900F4364C3513E2D303 /* OnboardingViewController.swift */; };
 		27128441A618AF08C556C1C9F7650794 /* FBSDKGraphRequestConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 757637013E7974BAD641D6B25FE15F19 /* FBSDKGraphRequestConnection.m */; };
 		277843C28931DC3115887354B2A50C66 /* FBSDKEventDeactivationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 888572CE4445644B728208C2D02B41F3 /* FBSDKEventDeactivationManager.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		277ADA2E19E0B66B077C8107C0181CDB /* GIDSignInButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A6718C0DC88584377BF2342DDC5306 /* GIDSignInButton.m */; };
@@ -311,7 +311,7 @@
 		58D1667A94FFE8C94FDFD897D383078D /* FBSDKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D6D7FCDCD85C21A36EEC30FE472D59 /* FBSDKMath.m */; };
 		590A9B95D7647A972995D48766E71A58 /* FBSDKServerConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 1262FFAFA3938B7ECD2C58BA12CCDFF2 /* FBSDKServerConfiguration.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		59D4024F086735987425BE69D4C1A0A8 /* Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E74FA42311972FCE414396B476336 /* Sync.swift */; };
-		59E25480807198004F467EAF14EE9420 /* OnboardLevelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90272C2D5894FA3027C9AE9B1CA993F9 /* OnboardLevelPresenter.swift */; };
+		59E25480807198004F467EAF14EE9420 /* OnboardingLevelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90272C2D5894FA3027C9AE9B1CA993F9 /* OnboardingLevelPresenter.swift */; };
 		5AE301CC1216A52DF02C54FC41292A12 /* RLMObjectBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = A782593F98CB97D6E65F3B0568706D5B /* RLMObjectBase.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"10.31.0\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		5B6B4F70A62642F904D4619247091CCF /* FBSDKImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 18AA13EED609B512226C1E7AEA3CE7EA /* FBSDKImageDownloader.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5B7DBECC9A1B37AC8A0EAC03ECA92E9D /* RLMRealmConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 00CFD65892A1C1D015A18CDA89B1C892 /* RLMRealmConfiguration.h */; };
@@ -334,7 +334,7 @@
 		5F1646E4AC1B1634AE345DF03155C12F /* RLMSyncSubscription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF274875F2A538DAF92DBFEAF1A5C /* RLMSyncSubscription.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"10.31.0\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		5F84F0B70A3D98388B56C3B09E4B2E65 /* FBSDKAccessTokenCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D48FEEE5D27CF2F02F873D11A07DD153 /* FBSDKAccessTokenCache.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5FA7D23229FB86DEB1929EC9858BB26C /* RLMFindOptions.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = F9085C7559F6919137571EF974A4D88F /* RLMFindOptions.h */; };
-		5FE197D222FD5913C7EE65F052E24523 /* OnboardLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66346CB312C246FEA3EC9B2F0260067B /* OnboardLevel.swift */; };
+		5FE197D222FD5913C7EE65F052E24523 /* OnboardingLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66346CB312C246FEA3EC9B2F0260067B /* OnboardingLevelViewController.swift */; };
 		60490DE3B498C8FF098FC0926D1542D5 /* RLMMongoClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7131F946278E7E73A1226180DF36C8C2 /* RLMMongoClient.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"10.31.0\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		608DEEB38C6B137DBC9A71197CBFD19D /* OIDRegistrationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FB7E4539BF95689B837DEA53ED346C /* OIDRegistrationRequest.m */; };
 		60F870E5FE7AE226AC785C44ED9651DE /* RLMResults.h in Headers */ = {isa = PBXBuildFile; fileRef = 97A3E681AC5AB0EE053C56D5EB25247E /* RLMResults.h */; };
@@ -639,7 +639,7 @@
 		C7891C175BDB73CD4659C5CEF51169E2 /* FBSDKBridgeAPIProtocolWebV2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6693FA894F6830056D86C185B0D330B7 /* FBSDKBridgeAPIProtocolWebV2.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C7B27737BE5F93BCAB793B081E5108DD /* RLMSyncUtil_Private.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = 923CD3A2CCCCE266CD8A4AB8A04B1CAF /* RLMSyncUtil_Private.h */; };
 		C80AB4B01C91961FF0C261A7BEED2DEC /* FBSDKAppLinkTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B370C468517A2F9277E0C92423082A2 /* FBSDKAppLinkTarget.m */; };
-		C8121DE5761437A4FC3A51BBCBD2B811 /* OnboardViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 08D2896E6C742F9DD0FDEBB2D6CAC837 /* OnboardViewController.xib */; };
+		C8121DE5761437A4FC3A51BBCBD2B811 /* OnboardingViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 08D2896E6C742F9DD0FDEBB2D6CAC837 /* OnboardingViewController.xib */; };
 		C849A5C56D996823EF0D05AE74825F73 /* FBSDKDeviceLoginCodeInfo+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = E2C95BB69532EE2988F026E6855A2B96 /* FBSDKDeviceLoginCodeInfo+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C8976FBA6C401ACD821CC8008118D275 /* OIDIDToken.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D819043DE20D341D536A0D869EF3D /* OIDIDToken.m */; };
 		C9EA977D887E8BE631EB402B3FA39010 /* FBSDKURL_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 289B4C8856BF662FC389C00B39093F9A /* FBSDKURL_Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -698,7 +698,7 @@
 		D6B588B9E14D9172700CBD3096A34472 /* FBSDKLoginUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D769F0C1E9F6AE868309A7A49F2EF5 /* FBSDKLoginUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D7D49B9129898D8BED968B9407310B1E /* OIDAuthorizationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC306A8960EE53C0CFF92B990F06A0 /* OIDAuthorizationResponse.m */; };
 		D8B0936BCB24F7C1C0E918BCA9430E70 /* GTMSessionFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 957FF4EFCFCBB2E2D2483EDC74392358 /* GTMSessionFetcherLogging.m */; };
-		D95B790543768174615E8A8D54F461AF /* OnboardLevel.xib in Sources */ = {isa = PBXBuildFile; fileRef = B936BB8A5BCF93799ED994A737A43253 /* OnboardLevel.xib */; };
+		D95B790543768174615E8A8D54F461AF /* OnboardingLevelViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = B936BB8A5BCF93799ED994A737A43253 /* OnboardingLevelViewController.xib */; };
 		D9683F630FCFC1D3FF8191C894CDA02B /* FBSDKSuggestedEventsIndexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 839536CF477E41659EA58868C5D9CBF9 /* FBSDKSuggestedEventsIndexer.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D9CE2B486C831679A3D8947AC7E854D5 /* OIDExternalUserAgentIOSCustomBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC4D2B5AA1ADF89877F146A701D5FD /* OIDExternalUserAgentIOSCustomBrowser.m */; };
 		D9D94C86B61FFF628DC8BA750851FDC4 /* RLMSwiftValueStorage.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 3D2D9D4E7D43AF4398C5CAE904EA7317 /* RLMSwiftValueStorage.h */; };
@@ -822,7 +822,7 @@
 		FBC8CF11AB07479C1B6A48CECB82C882 /* fi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AB77DFAD9A0254E703A15A75A847CCC6 /* fi.lproj */; };
 		FC2E7637A697415DF146F73F95488F0D /* GIDProfileData.h in Headers */ = {isa = PBXBuildFile; fileRef = 354F9E9D2F713992CF7C4251AE9BFEA6 /* GIDProfileData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC46686EC969456C2955AE0D45CD2E90 /* RLMUser_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DFC590BCC839C8C2914404D4AA9318 /* RLMUser_Private.h */; };
-		FC628683FA407C59C34CCAD29861E964 /* OnboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69AF47A0A48817844D57AC9B93F608B /* OnboardPresenter.swift */; };
+		FC628683FA407C59C34CCAD29861E964 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69AF47A0A48817844D57AC9B93F608B /* OnboardingPresenter.swift */; };
 		FC81428324B77FC78D5D64DC5A326E8A /* RLMAsymmetricObject.h in Headers */ = {isa = PBXBuildFile; fileRef = CC2EECEE4D160054ECAAA9D981F8420B /* RLMAsymmetricObject.h */; };
 		FD2373F911CF004D48ADD7CD724C7F8C /* RLMSchema.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5122C3A8F38B13ED43B08E7D0F35A84 /* RLMSchema.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"10.31.0\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		FD2D1AAABF48B694EA3B55E936E34AD6 /* FBSDKCodelessParameterComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B72BE13AAD2948E6C2098D2783CE94E /* FBSDKCodelessParameterComponent.m */; };
@@ -1372,7 +1372,7 @@
 		06C49D2F147C5DC693D160D1831869C9 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = tr.lproj; path = GoogleSignIn/Sources/Strings/tr.lproj; sourceTree = "<group>"; };
 		0793DD2D1F326FBCC1B1CD667949E5DA /* FBSDKGraphRequestConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGraphRequestConnection.h; path = FBSDKCoreKit/FBSDKCoreKit/GraphAPI/FBSDKGraphRequestConnection.h; sourceTree = "<group>"; };
 		08B88A1D8563DEEEDE067CE56460C788 /* RLMPushClient.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMPushClient.mm; path = Realm/RLMPushClient.mm; sourceTree = "<group>"; };
-		08D2896E6C742F9DD0FDEBB2D6CAC837 /* OnboardViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OnboardViewController.xib; sourceTree = "<group>"; };
+		08D2896E6C742F9DD0FDEBB2D6CAC837 /* OnboardingViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
 		0918EDD163C1F579CC53F11196A696CC /* RLMSyncManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncManager.h; path = include/RLMSyncManager.h; sourceTree = "<group>"; };
 		0973EEF9B870BB743247CFD3D8452AE2 /* FBSDKDeviceUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKDeviceUtilities.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Device/FBSDKDeviceUtilities.m; sourceTree = "<group>"; };
 		0990E43C3A9E39127EE4AF65CD861357 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
@@ -1690,7 +1690,7 @@
 		65E7B36D594C53A2AF5A8491EDF71668 /* FBSDKLoginTooltipView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKLoginTooltipView.m; path = FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginTooltipView.m; sourceTree = "<group>"; };
 		65FAFFD412DBFAB05E62250450615B54 /* RLMObject_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObject_Private.h; path = include/RLMObject_Private.h; sourceTree = "<group>"; };
 		660957A46C643571A151F78BEAE787ED /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ko.lproj; path = GoogleSignIn/Sources/Strings/ko.lproj; sourceTree = "<group>"; };
-		66346CB312C246FEA3EC9B2F0260067B /* OnboardLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardLevel.swift; sourceTree = "<group>"; };
+		66346CB312C246FEA3EC9B2F0260067B /* OnboardingLevelViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingLevelViewController.swift; sourceTree = "<group>"; };
 		6693FA894F6830056D86C185B0D330B7 /* FBSDKBridgeAPIProtocolWebV2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBridgeAPIProtocolWebV2.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/ProtocolVersions/FBSDKBridgeAPIProtocolWebV2.h; sourceTree = "<group>"; };
 		66950C909AF1B17D144B76EF64DBD0D0 /* GIDEMMErrorHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GIDEMMErrorHandler.h; path = GoogleSignIn/Sources/GIDEMMErrorHandler.h; sourceTree = "<group>"; };
 		66F9B34672D1BCBE4FCF96B675DE72FB /* FBSDKLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKLogger.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKLogger.m; sourceTree = "<group>"; };
@@ -1728,7 +1728,7 @@
 		72BD7F14DABA5A07D83B0F749FAF2C3B /* RLMSet.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSet.mm; path = Realm/RLMSet.mm; sourceTree = "<group>"; };
 		731DB2678D3FC4930D82EA2A62C317B6 /* GIDAuthentication_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GIDAuthentication_Private.h; path = GoogleSignIn/Sources/GIDAuthentication_Private.h; sourceTree = "<group>"; };
 		734F245CF03A2AAB970F2CE5705BAFB0 /* OIDURLSessionProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLSessionProvider.h; path = Source/AppAuthCore/OIDURLSessionProvider.h; sourceTree = "<group>"; };
-		735A51787C44E900F4364C3513E2D303 /* OnboardViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		735A51787C44E900F4364C3513E2D303 /* OnboardingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		7368FD17205056E4D216D61AF13BE39C /* Authentication-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Authentication-umbrella.h"; sourceTree = "<group>"; };
 		7372761B6576155C1BB9F72325FC434C /* RLMUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMUtil.mm; path = Realm/RLMUtil.mm; sourceTree = "<group>"; };
 		74091E5E8F9B8FF8B02B328353D1BDC5 /* Pods-tech-englishTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-tech-englishTests-dummy.m"; sourceTree = "<group>"; };
@@ -1825,7 +1825,7 @@
 		8F9628FA074E532B3227D6C3E9AEF8AC /* OIDResponseTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDResponseTypes.h; path = Source/AppAuthCore/OIDResponseTypes.h; sourceTree = "<group>"; };
 		8FA3F2A521C9671E703B0CE3B7EC6D6E /* OIDFieldMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDFieldMapping.m; path = Source/AppAuthCore/OIDFieldMapping.m; sourceTree = "<group>"; };
 		8FC824FB6A7AE9A6058902ACA3DCEDD1 /* FBSDKCopying.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKCopying.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKCopying.h; sourceTree = "<group>"; };
-		90272C2D5894FA3027C9AE9B1CA993F9 /* OnboardLevelPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardLevelPresenter.swift; sourceTree = "<group>"; };
+		90272C2D5894FA3027C9AE9B1CA993F9 /* OnboardingLevelPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingLevelPresenter.swift; sourceTree = "<group>"; };
 		907B149F640AB1352B790C4A7993FEA3 /* Authentication-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Authentication-prefix.pch"; sourceTree = "<group>"; };
 		907E0608D3A5301D7E8542726BFFBFE9 /* OIDExternalUserAgentCatalyst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentCatalyst.m; path = Source/AppAuth/iOS/OIDExternalUserAgentCatalyst.m; sourceTree = "<group>"; };
 		9174F998E9D19CEBD11DFF33C1F8F023 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = hu.lproj; path = GoogleSignIn/Sources/Strings/hu.lproj; sourceTree = "<group>"; };
@@ -1979,7 +1979,7 @@
 		B8D78257B7C8E514E2FFC7D28F411C5C /* FBSDKCodelessPathComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKCodelessPathComponent.h; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/Codeless/FBSDKCodelessPathComponent.h; sourceTree = "<group>"; };
 		B8DC14B7FF04EAC02008A31AD017452F /* Pods-tech-english-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-tech-english-frameworks.sh"; sourceTree = "<group>"; };
 		B927C9F73B1B23EB6866DCB90C5EF17C /* FBSDKErrorRecoveryAttempter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKErrorRecoveryAttempter.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ErrorRecovery/FBSDKErrorRecoveryAttempter.m; sourceTree = "<group>"; };
-		B936BB8A5BCF93799ED994A737A43253 /* OnboardLevel.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OnboardLevel.xib; sourceTree = "<group>"; };
+		B936BB8A5BCF93799ED994A737A43253 /* OnboardingLevelViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OnboardingLevelViewController.xib; sourceTree = "<group>"; };
 		B9BF825FBC529C41D17526A014931819 /* TNUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TNUI.release.xcconfig; sourceTree = "<group>"; };
 		B9D2D2E9F226A2430527310C565454B9 /* FBSDKEventInferencer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKEventInferencer.h; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/SuggestedEvents/FBSDKEventInferencer.h; sourceTree = "<group>"; };
 		BA02C40B84C11F9CD317A5A3DA30C841 /* OIDGrantTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDGrantTypes.h; path = Source/AppAuthCore/OIDGrantTypes.h; sourceTree = "<group>"; };
@@ -2126,7 +2126,7 @@
 		E603D26C6ECFAB53C8F05A6351C50A0C /* GIDCallbackQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GIDCallbackQueue.h; path = GoogleSignIn/Sources/GIDCallbackQueue.h; sourceTree = "<group>"; };
 		E67DBB2D6E789D43D20C26B727BCA2A1 /* RLMProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMProperty.h; path = include/RLMProperty.h; sourceTree = "<group>"; };
 		E67E69DDF2DB2229C066C730D2D7F378 /* FBSDKAppLinkResolving.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAppLinkResolving.h; path = FBSDKCoreKit/FBSDKCoreKit/AppLink/FBSDKAppLinkResolving.h; sourceTree = "<group>"; };
-		E69AF47A0A48817844D57AC9B93F608B /* OnboardPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardPresenter.swift; sourceTree = "<group>"; };
+		E69AF47A0A48817844D57AC9B93F608B /* OnboardingPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
 		E6C51EC4E2F9F09E0FE8C46399F2E8A1 /* AppAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppAuth-prefix.pch"; sourceTree = "<group>"; };
 		E6C925EA7CA974922EEE54916A011AD4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E728A5077C04A437E74508A4521B1A68 /* FBSDKCoreKit+Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FBSDKCoreKit+Typealiases.swift"; path = "Sources/Core/FBSDKCoreKit+Typealiases.swift"; sourceTree = "<group>"; };
@@ -2420,7 +2420,7 @@
 		049D580B28FD893A00D42D51 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				90272C2D5894FA3027C9AE9B1CA993F9 /* OnboardLevelPresenter.swift */,
+				90272C2D5894FA3027C9AE9B1CA993F9 /* OnboardingLevelPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -2436,8 +2436,8 @@
 		049D580D28FD894500D42D51 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				66346CB312C246FEA3EC9B2F0260067B /* OnboardLevel.swift */,
-				B936BB8A5BCF93799ED994A737A43253 /* OnboardLevel.xib */,
+				66346CB312C246FEA3EC9B2F0260067B /* OnboardingLevelViewController.swift */,
+				B936BB8A5BCF93799ED994A737A43253 /* OnboardingLevelViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2654,8 +2654,8 @@
 		2E6465C054C8A66000385AD97F382118 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				735A51787C44E900F4364C3513E2D303 /* OnboardViewController.swift */,
-				08D2896E6C742F9DD0FDEBB2D6CAC837 /* OnboardViewController.xib */,
+				735A51787C44E900F4364C3513E2D303 /* OnboardingViewController.swift */,
+				08D2896E6C742F9DD0FDEBB2D6CAC837 /* OnboardingViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3395,7 +3395,7 @@
 		9B932536E4747BEFBB2807FC18014E82 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				E69AF47A0A48817844D57AC9B93F608B /* OnboardPresenter.swift */,
+				E69AF47A0A48817844D57AC9B93F608B /* OnboardingPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -5302,13 +5302,13 @@
 				0A5704C88C7B663AB86FCD3BAC666A6D /* Onboarding-dummy.m in Sources */,
 				A97B91F32FF56AB8C7429B2481EE883D /* OnboardingCoordinator.swift in Sources */,
 				64F10C98F8256CC35ACC96B11B671E67 /* OnboardingService.swift in Sources */,
-				5FE197D222FD5913C7EE65F052E24523 /* OnboardLevel.swift in Sources */,
-				D95B790543768174615E8A8D54F461AF /* OnboardLevel.xib in Sources */,
-				59E25480807198004F467EAF14EE9420 /* OnboardLevelPresenter.swift in Sources */,
-				FC628683FA407C59C34CCAD29861E964 /* OnboardPresenter.swift in Sources */,
+				5FE197D222FD5913C7EE65F052E24523 /* OnboardingLevelViewController.swift in Sources */,
+				D95B790543768174615E8A8D54F461AF /* OnboardingLevelViewController.xib in Sources */,
+				59E25480807198004F467EAF14EE9420 /* OnboardingLevelPresenter.swift in Sources */,
+				FC628683FA407C59C34CCAD29861E964 /* OnboardingPresenter.swift in Sources */,
 				049D581228FD8D3800D42D51 /* OnboardingLevelService.swift in Sources */,
-				268915B333D39A867DEE21E62D61542A /* OnboardViewController.swift in Sources */,
-				C8121DE5761437A4FC3A51BBCBD2B811 /* OnboardViewController.xib in Sources */,
+				268915B333D39A867DEE21E62D61542A /* OnboardingViewController.swift in Sources */,
+				C8121DE5761437A4FC3A51BBCBD2B811 /* OnboardingViewController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

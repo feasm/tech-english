@@ -7,9 +7,7 @@
 
 import Foundation
 import UIKit
-
 import TNCore
-import Onboarding
 
 public final class OnboardingCoordinator: Coordinator {
     
@@ -21,22 +19,23 @@ public final class OnboardingCoordinator: Coordinator {
     }
     
     public func start() {
-        let service = OnboardService()
-        let presenter = OnboardPresenter(service: service)
-        let viewController = OnboardViewController( presenter: presenter)
+        let service = OnboardingService()
+        let presenter = OnboardingPresenter(service: service)
+        let viewController = OnboardingViewController(presenter: presenter)
         
         presenter.coordinator = self
         navigationViewController?.pushViewController(viewController, animated: true)
-
     }
 }
-extension OnboardingCoordinator: OnboardingPresenterCoordinator {
+
+extension OnboardingCoordinator: OnboardingCoordinatorProtocol {
     public func openLevelScreen() {
-        let viewController = OnboardLevel()
+        let service = OnboardingLevelService()
+        let presenter = OnboardingLevelPresenter(service: service)
+        let viewController = OnboardingLevelViewController(presenter: presenter)
         
-        DispatchQueue.main.async {
-            self.navigationViewController?.pushViewController(viewController, animated: true)
+        DispatchQueue.main.async { [weak self] in
+        self?.navigationViewController?.pushViewController(viewController, animated: true)
         }
     }
-
 }

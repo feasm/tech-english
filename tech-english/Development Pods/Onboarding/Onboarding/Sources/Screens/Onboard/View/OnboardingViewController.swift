@@ -47,10 +47,9 @@ class OnboardingViewController: TEBaseViewController {
         if dataText.text == "" {
             dataText.placeholder = "Campo Obrigatorio"
         }
-        if dataText.text != ""{
+        if dataText.text != "" {
             if let data = dataText.text {
-                presenter?.birthData = data
-                print(presenter?.birthData ?? "Teste Falho")
+                getBirthUser(data: data)
             }
         }
         if nameText.text == "" {
@@ -58,27 +57,40 @@ class OnboardingViewController: TEBaseViewController {
         }
         if nameText.text != ""{
             if let name = nameText.text {
-                presenter?.userName = name
-                print(presenter?.userName ?? "Teste Falho")
+                getNameUser(name: name.trimmingCharacters(in: .whitespaces))
             }
         }
-            openLevelScreen()
+        openLevelScreen()
+    }
+    
+    func getBirthUser(data: String) {
+        if let userBirth = data as Optional {
+            presenter?.birthData = userBirth
+        }
+    }
+    
+    func getNameUser(name: String) {
+        if let userName = name as Optional {
+            presenter?.userName = userName
+        }
     }
     
     func openLevelScreen() {
-        if (dataText.text != nil) && nameText.text != "" {
+        if (dataText.text != "") && nameText.text != "" {
             presenter?.didTapNextButton()
+        }else {
+            let alert = UIAlertController(title: "Erro", message: "Campos não podem estar em branco.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
     private func textFieldDidEndEditing(textField: UITextField) -> Bool {
-        
         if textField.text != "" {
             return true
         }else{
             return false
         }
-            
     }
     
     @objc func dismissKeyboard() {
@@ -103,15 +115,13 @@ class OnboardingViewController: TEBaseViewController {
         }
     }
 }
-extension OnboardingViewController: UITextFieldDelegate{
-    func textField(_ textField: UITextField,
-                   shouldChangeCharactersIn range: NSRange,
-                   replacementString string: String) -> Bool {
 
-            dataText.text = dataMask.formatStringWithRange(range: range, string: string)
+extension OnboardingViewController: UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        dataText.text = dataMask.formatStringWithRange(range: range, string: string)
         nameText.text = nickMask.formatStringWithRange(range: range, string: string)
             return false
-        }
+    }
 }
 
     
