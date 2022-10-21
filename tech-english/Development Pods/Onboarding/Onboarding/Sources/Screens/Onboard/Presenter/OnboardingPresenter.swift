@@ -7,23 +7,23 @@
 
 import Foundation
 
-public protocol OnboardingPresenterCoordinator {
+public protocol OnboardingCoordinatorProtocol {
     func openLevelScreen()
 }
 
-class OnboardPresenter {
+class OnboardingPresenter {
     
     var userName: String?
-    var birthData:String?
-    var service: OnboardService
-    var coordinator: OnboardingPresenterCoordinator?
+    var birthData: String?
+    var service: OnboardingService?
+    var coordinator: OnboardingCoordinator?
     
     func didTapNextButton() {
         coordinator?.openLevelScreen()
     }
-    public init(service: OnboardService) {
+    
+    public init(service: OnboardingService) {
         self.service = service
-        self.coordinator?.openLevelScreen()
     }
 }
 

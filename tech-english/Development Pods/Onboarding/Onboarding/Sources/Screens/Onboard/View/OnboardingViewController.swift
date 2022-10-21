@@ -10,7 +10,8 @@ import TLCustomMask
 
 import TNCore
 
-class OnboardViewController: TEBaseViewController {
+class OnboardingViewController: TEBaseViewController {
+    
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var dataText: UITextField!
     @IBOutlet weak var principalLabel: UILabel!
@@ -18,9 +19,9 @@ class OnboardViewController: TEBaseViewController {
     var buttonConstraint: CGFloat = 0
     var dataMask = TLCustomMask(formattingPattern: "$$/$$/$$$$")
     var nickMask = TLCustomMask(formattingPattern: "*************************")
-    var presenter: OnboardPresenter?
+    var presenter: OnboardingPresenter?
     
-    init(presenter: OnboardPresenter) {
+    init(presenter: OnboardingPresenter) {
         self.presenter = presenter
         super.init()
     }
@@ -40,11 +41,9 @@ class OnboardViewController: TEBaseViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
-        
     }
+    
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        
         if dataText.text == "" {
             dataText.placeholder = "Campo Obrigatorio"
         }
@@ -63,12 +62,13 @@ class OnboardViewController: TEBaseViewController {
                 print(presenter?.userName ?? "Teste Falho")
             }
         }
-//        && Function
-            nextOnboardScreen()
+            openLevelScreen()
     }
     
-    func nextOnboardScreen() {
-        presenter?.didTapNextButton()
+    func openLevelScreen() {
+        if (dataText.text != nil) && nameText.text != "" {
+            presenter?.didTapNextButton()
+        }
     }
     
     private func textFieldDidEndEditing(textField: UITextField) -> Bool {
@@ -86,10 +86,8 @@ class OnboardViewController: TEBaseViewController {
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y == 0 {
-                let height = keyboardSize.height
                 nextButton.frame.origin.y -= nextButton.frame.origin.y + 125
                 view.frame.origin.y = buttonConstraint
             }
@@ -97,17 +95,15 @@ class OnboardViewController: TEBaseViewController {
     }
 
     @objc func keyboardWillHide(notification: NSNotification) {
-        
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if nextButton.frame.origin.y != buttonConstraint {
                 nextButton.frame.origin.y = buttonConstraint
                 view.frame.origin.y = 0
-                
             }
         }
     }
 }
-extension OnboardViewController: UITextFieldDelegate{
+extension OnboardingViewController: UITextFieldDelegate{
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class OnboardLevelPresenter {
+class OnboardingLevelPresenter {
     
     var lvlUser: String?
     var service: OnboardingLevelService

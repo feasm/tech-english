@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardLevel" customModule="Onboarding" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingLevelViewController" customModule="Onboarding" customModuleProvider="target">
             <connections>
                 <outlet property="avancedButton" destination="r88-AT-Jb0" id="HLS-ZT-Ule"/>
                 <outlet property="basicButton" destination="6vs-uR-2vy" id="4r3-vk-Dbb"/>

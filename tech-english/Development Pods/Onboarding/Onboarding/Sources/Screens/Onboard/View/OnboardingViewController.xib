@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardViewController" customModule="Onboarding" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingViewController" customModule="Onboarding" customModuleProvider="target">
             <connections>
                 <outlet property="dataText" destination="9vu-So-AJe" id="mg1-JN-atD"/>
                 <outlet property="nameText" destination="CHd-hi-o5T" id="3Ey-bu-TER"/>

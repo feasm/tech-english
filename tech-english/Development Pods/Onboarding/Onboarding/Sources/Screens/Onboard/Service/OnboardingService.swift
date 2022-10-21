@@ -7,7 +7,7 @@
 import TNCore
 import RealmSwift
 
-public class OnboardService {
+public class OnboardingService {
     
     let app = App(id: Constants.appID)
     

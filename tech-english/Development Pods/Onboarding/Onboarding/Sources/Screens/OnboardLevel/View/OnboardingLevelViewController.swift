@@ -8,13 +8,13 @@
 import UIKit
 import TNCore
 
-class OnboardLevel: TEBaseViewController {
+class OnboardingLevelViewController: TEBaseViewController {
     
     @IBOutlet weak var basicButton: UIButton!
     @IBOutlet weak var intermedButton: UIButton!
     @IBOutlet weak var avancedButton: UIButton!
     
-    var presenter: OnboardLevelPresenter?
+    var presenter: OnboardingLevelPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
