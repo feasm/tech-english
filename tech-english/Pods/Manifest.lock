@@ -37,6 +37,7 @@ PODS:
     - GTMSessionFetcher/Core (< 3.0, >= 1.5)
   - GTMSessionFetcher/Core (2.1.0)
   - Onboarding (0.1.0):
+    - RealmSwift
     - TLCustomMask
     - TNCore
     - TNUI
@@ -102,7 +103,7 @@ SPEC CHECKSUMS:
   GoogleSignIn: 5651ce3a61e56ca864160e79b484cd9ed3f49b7a
   GTMAppAuth: 0ff230db599948a9ad7470ca667337803b3fc4dd
   GTMSessionFetcher: ffbb25ec00ebcb5201adab0a56d808f6f1902d9f
-  Onboarding: 7048fe694c37617fd8c743fa4f894b7e89033adb
+  Onboarding: 0bbf9095e872e3ad5f05aa3292a6f5b7b9bb000d
   Realm: 10df7d86e1ca09d9948fdce2faa3fc623fb092c6
   RealmSwift: aecc52389574be4d451bf6cb1b08824eaa17dad0
   SampleModule: 7d0127fe373ffadc23e72c5b27117dc41e8227de

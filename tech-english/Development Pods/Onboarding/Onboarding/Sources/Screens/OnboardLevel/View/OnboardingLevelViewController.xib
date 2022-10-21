@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingLevelViewController" customModule="Onboarding" customModuleProvider="target">
+            <connections>
+                <outlet property="avancedButton" destination="r88-AT-Jb0" id="HLS-ZT-Ule"/>
+                <outlet property="basicButton" destination="6vs-uR-2vy" id="4r3-vk-Dbb"/>
+                <outlet property="intermedButton" destination="dmv-Oi-HQD" id="B0V-k5-2e6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OEu-8g-tAG">
+                    <rect key="frame" x="32" y="136" width="319" height="112"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual o seu nível?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6el-wk-QjB">
+                            <rect key="frame" x="0.0" y="0.0" width="319" height="112"/>
+                            <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="40"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="319" id="ETg-uy-Mnj"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Njk-hR-ZJJ">
+                    <rect key="frame" x="32" y="261" width="306.5" height="17"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos adaptar o aplicativo ao seu conhecimento!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lO6-a2-2fp">
+                            <rect key="frame" x="0.0" y="0.0" width="306.5" height="17"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <color key="highlightedColor" red="0.33725490200000002" green="0.36470588240000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qWf-ao-IE8">
+                    <rect key="frame" x="39" y="329" width="297" height="98"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vs-uR-2vy">
+                            <rect key="frame" x="0.0" y="0.0" width="297" height="98"/>
+                            <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Básico">
+                                <color key="titleColor" systemColor="labelColor"/>
+                                <color key="titleShadowColor" red="0.29803921570000003" green="0.90588235289999997" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <buttonConfiguration key="configuration" style="filled" title="Básico" subtitle="Estou começando!" titleAlignment="center">
+                                <fontDescription key="titleFontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
+                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                <color key="baseBackgroundColor" red="0.29803921570000003" green="0.90588235289999997" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="levelButtonPressed:" destination="-1" eventType="touchUpInside" id="Lfq-mK-qJn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="98" id="7p0-RD-IXw"/>
+                        <constraint firstAttribute="width" constant="297" id="eSc-zi-vej"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BxY-7T-cbe">
+                    <rect key="frame" x="39" y="449" width="297" height="98"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmv-Oi-HQD">
+                            <rect key="frame" x="0.0" y="0.0" width="297" height="98"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Intermediario" subtitle="Só preciso de um empurrãozinho!" titleAlignment="center">
+                                <fontDescription key="titleFontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
+                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                <color key="baseBackgroundColor" red="0.94901960784313721" green="0.76078431372549016" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="levelButtonPressed:" destination="-1" eventType="touchUpInside" id="dQE-51-GkC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="297" id="B6s-yg-eqe"/>
+                        <constraint firstAttribute="height" constant="98" id="ebL-a8-Rqs"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6xQ-42-bB7">
+                    <rect key="frame" x="39" y="569" width="297" height="98"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r88-AT-Jb0">
+                            <rect key="frame" x="0.0" y="0.0" width="297" height="98"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Avançado" subtitle="Me viro muito bem, mas da pra melhorar!" titleAlignment="center">
+                                <fontDescription key="titleFontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
+                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                <color key="baseBackgroundColor" red="0.70588235294117641" green="0.5490196078431373" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="levelButtonPressed:" destination="-1" eventType="touchUpInside" id="UPQ-eu-WAi"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="297" id="BLg-sO-asQ"/>
+                        <constraint firstAttribute="height" constant="98" id="srE-ag-UdW"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qWf-ao-IE8" firstAttribute="top" secondItem="lO6-a2-2fp" secondAttribute="bottom" constant="51" id="711-GX-vKT"/>
+                <constraint firstAttribute="trailing" secondItem="qWf-ao-IE8" secondAttribute="trailing" constant="39" id="8bP-SH-WHm"/>
+                <constraint firstAttribute="trailing" secondItem="OEu-8g-tAG" secondAttribute="trailing" constant="32" id="8rW-RM-Luf"/>
+                <constraint firstItem="OEu-8g-tAG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="92" id="KIW-wi-cu4"/>
+                <constraint firstItem="BxY-7T-cbe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="39" id="Khb-zC-giA"/>
+                <constraint firstAttribute="trailing" secondItem="6xQ-42-bB7" secondAttribute="trailing" constant="39" id="LK4-fo-rgP"/>
+                <constraint firstItem="6xQ-42-bB7" firstAttribute="top" secondItem="dmv-Oi-HQD" secondAttribute="bottom" constant="22" id="SLU-j2-MVj"/>
+                <constraint firstAttribute="trailing" secondItem="BxY-7T-cbe" secondAttribute="trailing" constant="39" id="Zaa-BR-STB"/>
+                <constraint firstItem="Njk-hR-ZJJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="cxn-FE-sF4"/>
+                <constraint firstItem="qWf-ao-IE8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="39" id="grk-9m-pZ6"/>
+                <constraint firstItem="6xQ-42-bB7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="39" id="joF-a4-npy"/>
+                <constraint firstItem="BxY-7T-cbe" firstAttribute="top" secondItem="6vs-uR-2vy" secondAttribute="bottom" constant="22" id="tCH-8j-evS"/>
+                <constraint firstItem="OEu-8g-tAG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="wl0-4e-294"/>
+                <constraint firstItem="Njk-hR-ZJJ" firstAttribute="top" secondItem="6el-wk-QjB" secondAttribute="bottom" constant="13" id="xIa-lf-ScG"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="111.83035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

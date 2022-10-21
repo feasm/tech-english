@@ -33,6 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'Onboarding/**/*'
 
   # Dependencies
+  s.dependency 'RealmSwift'
   s.dependency 'TNCore'
   s.dependency 'TNUI'
   s.dependency 'TLCustomMask'
