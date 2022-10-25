@@ -2385,6 +2385,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001F65EC290868C2005BD5A5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		001F65ED290868CA005BD5A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				009229B9290082B700CCA071 /* RegisterEmailViewController.swift */,
+				009229BD29008B3400CCA071 /* RegisterEmailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		001F65EE290868D0005BD5A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		009229B62900813600CCA071 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2402,8 +2425,9 @@
 		009229B82900827F00CCA071 /* RegisterEmail */ = {
 			isa = PBXGroup;
 			children = (
-				009229B9290082B700CCA071 /* RegisterEmailViewController.swift */,
-				009229BD29008B3400CCA071 /* RegisterEmailViewController.xib */,
+				001F65EE290868D0005BD5A5 /* Model */,
+				001F65ED290868CA005BD5A5 /* View */,
+				001F65EC290868C2005BD5A5 /* Presenter */,
 			);
 			path = RegisterEmail;
 			sourceTree = "<group>";

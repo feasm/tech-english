@@ -16,7 +16,7 @@ class RegisterEmailViewController: TEBaseViewController {
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var divider: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var errorText: UILabel!
     var originalYButton:CGFloat = 0
     
@@ -46,6 +46,7 @@ class RegisterEmailViewController: TEBaseViewController {
         signUpLabel.numberOfLines = 3
     }
 
+
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -55,15 +56,24 @@ class RegisterEmailViewController: TEBaseViewController {
     }
     
     @IBAction func pressedNextButton(_ sender: UIButton) {
+        guard let email = emailTextField.text else { return }
         
-        if nameTextField.text == "" {
-            errorText.text = "Este campo não pode estar vazio"
+        if isValidEmail(email) == false {
+            errorText.text = "Please type a valid e-mail address"
         }
         else {
             errorText.text = ""
+            
         }
     }
+    
+    func isValidEmail(_ emailID: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: emailID)
+    }
+    
 
 
     @objc func keyboardWillShow(notification: NSNotification) {

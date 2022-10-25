@@ -20,8 +20,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterEmailViewController" customModule="Authentication" customModuleProvider="target">
             <connections>
                 <outlet property="divider" destination="W7R-B6-5TQ" id="cwO-ja-uvQ"/>
+                <outlet property="emailTextField" destination="ogV-ze-Gek" id="ZRm-Vg-e1T"/>
                 <outlet property="errorText" destination="uLw-aT-YUJ" id="ABV-gJ-s0f"/>
-                <outlet property="nameTextField" destination="ogV-ze-Gek" id="dP6-hN-hJd"/>
                 <outlet property="nextButton" destination="P7U-ps-p1Y" id="Pmn-2Y-prc"/>
                 <outlet property="returnButton" destination="UcT-dD-41S" id="4QS-fq-VwB"/>
                 <outlet property="signUpLabel" destination="QUf-zP-UAa" id="lSF-Z1-tpF"/>
