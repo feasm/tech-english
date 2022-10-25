@@ -1,34 +1,25 @@
 //
-//  RegisterEmailViewController.swift
+//  RegisterPasswordViewController.swift
 //  Authentication
 //
-//  Created by Vinicius de Luca on 19/10/22.
+//  Created by Vinicius de Luca on 25/10/22.
 //
 
 import UIKit
-import Foundation
-
 import TNCore
 
-class RegisterEmailViewController: TEBaseViewController {
+class RegisterPasswordViewController: TEBaseViewController {
 
-    var presenter: RegisterEmailPresenterProtocol?
-    
-    init(presenter: RegisterEmailPresenterProtocol) {
-        self.presenter = presenter
-        super.init()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     @IBOutlet weak var signUpLabel: UILabel!
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var divider: UIImageView!
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var errorText: UILabel!
+    @IBOutlet weak var errorText2: UILabel!
+    
     var originalYButton:CGFloat = 0
     
     
@@ -40,13 +31,15 @@ class RegisterEmailViewController: TEBaseViewController {
     
     private func updateUI(){
         
+        errorText.text = ""
+        errorText2.text = ""
         
         returnButton.setTitle("", for: .normal)
         
         let arrowImage = UIImage(named: "Arrowleft2.png")
         returnButton.setImage(arrowImage?.withRenderingMode(.alwaysOriginal), for: .normal)
 
-        originalYButton = nextButton.frame.origin.y
+        originalYButton = signUpButton.frame.origin.y
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
@@ -57,7 +50,6 @@ class RegisterEmailViewController: TEBaseViewController {
         signUpLabel.numberOfLines = 3
     }
 
-
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -67,31 +59,44 @@ class RegisterEmailViewController: TEBaseViewController {
     }
     
     @IBAction func pressedNextButton(_ sender: UIButton) {
-        guard let email = emailTextField.text else { return }
         
-        if presenter?.isValidEmail(email) == false {
-            errorText.text = "Insira um email válido"
+        if passwordTextField.text == "" {
+            errorText.text = "Este campo não pode estar vazio"
         }
         else {
             errorText.text = ""
-            nextButtonTapped()
         }
+        if confirmPasswordTextField.text == "" {
+            errorText2.text = "Este campo não pode estar vazio"
+        }
+        else {
+            errorText2.text = ""
+        }
+        if confirmPasswordTextField.text != passwordTextField.text {
+            errorText2.text = "As senhas não correspondem"
+        }
+        else {
+//            nextButtonTapped()
+        }
+        
     }
-    
-    func nextButtonTapped() {
-        presenter?.didTapNextButton()
-    }
-    
+//    func nextButtonTapped() {
+//        presenter?.didTapNextButton()
+//    }
+
+
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
                 let height = keyboardSize.height
-                self.nextButton.frame.origin.y -= height
+                self.signUpButton.frame.origin.y -= height
+
         }
     }
 
     @objc func keyboardWillHide(notification: NSNotification) {
-        if nextButton.frame.origin.y != originalYButton {
-            self.nextButton.frame.origin.y = originalYButton
+        if signUpButton.frame.origin.y != originalYButton {
+            self.signUpButton.frame.origin.y = originalYButton
             }
         }
 }
+

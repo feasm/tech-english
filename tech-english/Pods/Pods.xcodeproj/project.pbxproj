@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001F65F029086963005BD5A5 /* RegisterEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F65EF29086963005BD5A5 /* RegisterEmailPresenter.swift */; };
+		001F65F229086A78005BD5A5 /* RegisterNumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F65F129086A78005BD5A5 /* RegisterNumberModel.swift */; };
+		001F65F429086A9A005BD5A5 /* RegisterEmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F65F329086A9A005BD5A5 /* RegisterEmailModel.swift */; };
+		001F65F829086BB5005BD5A5 /* RegisterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F65F629086BB5005BD5A5 /* RegisterPasswordViewController.swift */; };
+		001F65F929086BB5005BD5A5 /* RegisterPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001F65F729086BB5005BD5A5 /* RegisterPasswordViewController.xib */; };
 		004ACCBA391F1D8A92E04F61FFAD773B /* FBSDKCodelessPathComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0B7BA4DE19DD5F5215E8DE485FE75D /* FBSDKCodelessPathComponent.m */; };
 		0062DC694AEC5283D24CD31010981E2B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED889E39C00D782484D4E7F1D9425260 /* LoginModel.swift */; };
 		009229B029007B6800CCA071 /* RegisterNamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDA44D95CFFA96282424D42A23A12F /* RegisterNamePresenter.swift */; };
@@ -1337,6 +1342,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		001F65EF29086963005BD5A5 /* RegisterEmailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailPresenter.swift; sourceTree = "<group>"; };
+		001F65F129086A78005BD5A5 /* RegisterNumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNumberModel.swift; sourceTree = "<group>"; };
+		001F65F329086A9A005BD5A5 /* RegisterEmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailModel.swift; sourceTree = "<group>"; };
+		001F65F629086BB5005BD5A5 /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
+		001F65F729086BB5005BD5A5 /* RegisterPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterPasswordViewController.xib; sourceTree = "<group>"; };
 		003BAD13DB575FCE23F207FE822D3F0A /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Sources/Core/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
 		005703F3BB07502B7381FC0033808E4A /* FacebookLogin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FacebookLogin-prefix.pch"; sourceTree = "<group>"; };
 		008CFB2788652E66CB2D30B11810E3AE /* OIDScopes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopes.m; path = Source/AppAuthCore/OIDScopes.m; sourceTree = "<group>"; };
@@ -2388,6 +2398,7 @@
 		001F65EC290868C2005BD5A5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				001F65EF29086963005BD5A5 /* RegisterEmailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -2404,13 +2415,24 @@
 		001F65EE290868D0005BD5A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				001F65F329086A9A005BD5A5 /* RegisterEmailModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		001F65F529086B80005BD5A5 /* RegisterPassword */ = {
+			isa = PBXGroup;
+			children = (
+				001F65F629086BB5005BD5A5 /* RegisterPasswordViewController.swift */,
+				001F65F729086BB5005BD5A5 /* RegisterPasswordViewController.xib */,
+			);
+			path = RegisterPassword;
 			sourceTree = "<group>";
 		};
 		009229B62900813600CCA071 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				001F65F129086A78005BD5A5 /* RegisterNumberModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2478,6 +2500,7 @@
 				CF3FF6A73B84F0D7E5593DACAAC98D01 /* RegisterName */,
 				699C27BC3ECCBB229540D793F74A1C79 /* RegisterNumber */,
 				009229B82900827F00CCA071 /* RegisterEmail */,
+				001F65F529086B80005BD5A5 /* RegisterPassword */,
 			);
 			name = Screens;
 			path = Authentication/Sources/Screens;
@@ -5133,6 +5156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001F65F929086BB5005BD5A5 /* RegisterPasswordViewController.xib in Resources */,
 				009229BE29008B3400CCA071 /* RegisterEmailViewController.xib in Resources */,
 				009229B429007E1700CCA071 /* AuthenticationAssets.xcassets in Resources */,
 			);
@@ -5415,18 +5439,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				D32E041A0E61712CB89F80F3F5ED0805 /* Authentication-dummy.m in Sources */,
+				001F65F429086A9A005BD5A5 /* RegisterEmailModel.swift in Sources */,
 				B688543F5F610939BFEBE20492FFFC8B /* LoginCoordinator.swift in Sources */,
 				0062DC694AEC5283D24CD31010981E2B /* LoginModel.swift in Sources */,
 				59FB46AFA420A1EA0F45F061F522AD24 /* LoginPresenter.swift in Sources */,
 				009229B029007B6800CCA071 /* RegisterNamePresenter.swift in Sources */,
+				001F65F829086BB5005BD5A5 /* RegisterPasswordViewController.swift in Sources */,
 				C78CCB59DB1AE323893BEADABC2724C2 /* LoginService.swift in Sources */,
 				58BCBA1DDD93D23A6990DA5E038BB45D /* LoginViewController.swift in Sources */,
 				588ABB9932DB556314E9E642BE34E9E3 /* LoginViewController.xib in Sources */,
 				03E91788D00E167D25370EF6BEA40C3D /* RegisterNameViewController.swift in Sources */,
 				A67839032D110BE55DC5DC34C0095D3C /* RegisterNameViewController.xib in Sources */,
+				001F65F029086963005BD5A5 /* RegisterEmailPresenter.swift in Sources */,
 				64A0AF4AB9B35EF112924182A75BB41E /* RegisterNumberViewController.swift in Sources */,
 				009229BB290082B700CCA071 /* RegisterEmailViewController.swift in Sources */,
 				03048E61B4F6910AE95C0CBB21F8EFA1 /* RegisterNumberViewController.xib in Sources */,
+				001F65F229086A78005BD5A5 /* RegisterNumberModel.swift in Sources */,
 				B0E969731F1FEAE7234FD49E84258F62 /* RegisterNumberPresenter.swift in Sources */,
 				B0E969731F1FEAE7234FD49E84258F62 /* RegisterNumberPresenter.swift in Sources */,
 				9B12BCD90B0AB450D29EC77BC338A74F /* TestViewController.swift in Sources */,
